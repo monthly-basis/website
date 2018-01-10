@@ -2,9 +2,11 @@
 namespace LeoGalleguillos\WebsiteTest\Model\Factory;
 
 use ArrayObject;
+use LeoGalleguillos\Website\Model\Entity as WebsiteEntity;
 use LeoGalleguillos\Website\Model\Factory as WebsiteFactory;
 use LeoGalleguillos\Website\Model\Table as WebsiteTable;
 use PHPUnit\Framework\TestCase;
+use ReflectionClass;
 
 class WebsiteTest extends TestCase
 {
@@ -21,5 +23,17 @@ class WebsiteTest extends TestCase
     public function testInitialize()
     {
         $this->assertInstanceOf(WebsiteFactory\Website::class, $this->websiteFactory);
+    }
+
+    public function testBuildInstance()
+    {
+		$reflectionClass  = new ReflectionClass($this->websiteFactory);
+		$reflectionMethod = $reflectionClass->getMethod('buildInstance');
+		$reflectionMethod->setAccessible(true);
+
+        $this->assertEquals(
+            new WebsiteEntity\Website(),
+            $reflectionMethod->invokeArgs($this->websiteFactory, [])
+        );
     }
 }

@@ -1,6 +1,7 @@
 <?php
 namespace LeoGalleguillos\Website\Model\Factory;
 
+use ArrayObject;
 use LeoGalleguillos\Website\Model\Entity as WebsiteEntity;
 use LeoGalleguillos\Website\Model\Table as WebsiteTable;
 use Application\Model\Table as ApplicationTable;
@@ -12,6 +13,19 @@ class Website
         WebsiteTable\Website $websiteTable
     ) {
         $this->websiteTable = $websiteTable;
+    }
+
+    public function buildFromArrayObject(
+        ArrayObject $arrayObject
+    ) : WebsiteEntity\Website {
+        $websiteEntity = $this->buildInstance()
+            ->setDescription($arrayObject['description'])
+            ->setDomain($arrayObject['domain'])
+            ->setGoogleAnalyticsTrackingId($arrayObject['google_analytics_tracking_id'])
+            ->setName($arrayObject['name'])
+            ->setWebsiteId($arrayObject['website_id']);
+
+        return $websiteEntity;
     }
 
     public function buildFromDomain() : WebsiteEntity\Website

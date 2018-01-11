@@ -33,14 +33,7 @@ class Website
         $arrayObject = $this->websiteTable->selectWhereDomain(
             $_SERVER['HTTP_HOST']
         );
-
-        $websiteEntity = $this->buildInstance()
-            ->setWebsiteId($arrayObject['website_website_id'])
-            ->setName($arrayObject['website_website_name'])
-            ->setGoogleAnalyticsTrackingId($arrayObject['website_website_google_analytics_tracking_id'])
-            ->setDescription($arrayObject['website_website_description']);
-
-        return $websiteEntity;
+        return $this->buildFromArrayObject($arrayObject);
     }
 
     protected function buildInstance() : WebsiteEntity\Website

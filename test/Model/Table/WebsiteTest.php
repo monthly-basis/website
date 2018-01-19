@@ -3,10 +3,11 @@ namespace LeoGalleguillos\WebsiteTest\Model\Table;
 
 use ArrayObject;
 use LeoGalleguillos\Website\Model\Table as WebsiteTable;
+use LeoGalleguillos\WebsiteTest\TableTestCase;
 use Zend\Db\Adapter\Adapter;
 use PHPUnit\Framework\TestCase;
 
-class WebsiteTest extends TestCase
+class WebsiteTest extends TableTestCase
 {
     /**
      * @var string
@@ -20,8 +21,10 @@ class WebsiteTest extends TestCase
         $this->adapter         = new Adapter($configArray);
         $this->websiteTable = new WebsiteTable\Website($this->adapter);
 
+        $this->setForeignKeyChecks0();
         $this->dropTable();
         $this->createTable();
+        $this->setForeignKeyChecks1();
     }
 
     protected function dropTable()

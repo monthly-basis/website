@@ -1,6 +1,7 @@
 CREATE TABLE `webpage` (
       `webpage_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
       `website_id` int(10) unsigned NOT NULL,
+      `url` varchar(255) NOT NULL,
       `title` varchar(255) NOT NULL,
       `html` text NOT NULL,
       PRIMARY KEY (`webpage_id`),

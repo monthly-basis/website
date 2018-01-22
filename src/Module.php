@@ -23,6 +23,11 @@ class Module
     {
         return [
             'factories' => [
+                WebsiteFactory\Webpage::class => function ($serviceManager) {
+                    return new WebsiteFactory\Webpage(
+                        $serviceManager->get(WebsiteTable\Webpage::class)
+                    );
+                },
                 WebsiteFactory\Website::class => function ($serviceManager) {
                     return new WebsiteFactory\Website(
                         $serviceManager->get(WebsiteTable\Website::class)

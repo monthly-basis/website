@@ -17,7 +17,7 @@ class Website
     public function insert(
         string $domain,
         string $name,
-        string $googleAnalyticsTrackingId
+        string $googleAnalyticsTrackingId = null
     ) {
         $sql = '
             INSERT

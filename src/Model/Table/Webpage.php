@@ -56,6 +56,7 @@ class Webpage
         $sql = '
             SELECT `webpage`.`webpage_id`
                  , `webpage`.`website_id`
+                 , `webpage`.`url`
                  , `webpage`.`title`
                  , `webpage`.`html`
               FROM `webpage`

@@ -19,6 +19,7 @@ class WebpageTest extends TableTestCase
         $configArray     = require(__DIR__ . '/../../../config/autoload/local.php');
         $configArray     = $configArray['db']['adapters']['leogalle_test'];
         $this->adapter         = new Adapter($configArray);
+        $this->websiteTable  = new WebsiteTable\Website($this->adapter);
         $this->webpageTable = new WebsiteTable\Webpage($this->adapter);
 
         $this->setForeignKeyChecks0();
@@ -55,6 +56,31 @@ class WebpageTest extends TableTestCase
         $this->assertSame(
             1,
             $this->webpageTable->selectCount()
+        );
+    }
+
+    public function testSelectWhereWebpageId()
+    {
+        $this->websiteTable->insert(
+            'www.cnn.com',
+            'CNN'
+        );
+        $this->webpageTable->insertIgnore(
+            1,
+            'url',
+            'title',
+            'html'
+        );
+        $arrayObject = new ArrayObject([
+            'webpage_id' => '1',
+            'website_id' => '1',
+            'url' => 'url',
+            'title' => 'title',
+            'html' => 'html',
+        ]);
+        $this->assertEquals(
+            $arrayObject,
+            $this->webpageTable->selectWhereWebpageId(1)
         );
     }
 }

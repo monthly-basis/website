@@ -20,7 +20,7 @@ class Webpage
         ArrayObject $arrayObject
     ) : WebsiteEntity\Webpage {
         $htmlEntity = new HtmlEntity\Html();
-        $htmlEntity->string = $arrayObject['html'];
+        $htmlEntity->setString($arrayObject['html']);
 
         $webpageEntity = $this->buildInstance()
             ->setHtml($htmlEntity)

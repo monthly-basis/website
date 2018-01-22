@@ -1,6 +1,8 @@
 <?php
 namespace LeoGalleguillos\WebsiteTest\Model\Factory;
 
+use ArrayObject;
+use LeoGalleguillos\Html\Model\Entity as HtmlEntity;
 use LeoGalleguillos\Website\Model\Entity as WebsiteEntity;
 use LeoGalleguillos\Website\Model\Factory as WebsiteFactory;
 use LeoGalleguillos\Website\Model\Service as WebsiteService;
@@ -24,6 +26,29 @@ class WebpageTest extends TestCase
         $this->assertInstanceOf(
             WebsiteFactory\Webpage::class,
             $this->webpageFactory
+        );
+    }
+
+    public function testbuildFromArrayObject()
+    {
+        $arrayObject = new ArrayObject([
+            'webpage_id' => '1',
+            'website_id' => '1',
+            'url' => 'url',
+            'title' => 'title',
+            'html' => 'html',
+        ]);
+
+        $htmlEntity = new HtmlEntity\Html();
+        $htmlEntity->setString($arrayObject['html']);
+
+        $webpageEntity = new WebsiteEntity\Webpage();
+        $webpageEntity->setHtml($htmlEntity)
+                      ->setTitle($arrayObject['title'])
+                      ->setUrl($arrayObject['url']);
+        $this->assertEquals(
+            $webpageEntity,
+            $this->webpageFactory->buildFromArrayObject($arrayObject)
         );
     }
 }

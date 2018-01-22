@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7711189fa945d4a3da2485d4539c9665",
-    "content-hash": "5404eecd606afa3da88bf3a820cf2cd5",
+    "hash": "fa7ba74bab639553de1731a762edbb38",
+    "content-hash": "561d68e2c1325ae865c56593a321397e",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -91,6 +91,36 @@
                 "instantiate"
             ],
             "time": "2015-06-14 21:17:01"
+        },
+        {
+            "name": "leo-galleguillos/html",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LeoGalleguillos/Html.git",
+                "reference": "9573f70f161f5e37107656ca7b8e491a13237445"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LeoGalleguillos/Html/zipball/9573f70f161f5e37107656ca7b8e491a13237445",
+                "reference": "9573f70f161f5e37107656ca7b8e491a13237445",
+                "shasum": ""
+            },
+            "require": {
+                "zendframework/zend-test": "^3.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LeoGalleguillos\\Html\\": "src/",
+                    "LeoGalleguillos\\HtmlTest\\": "test/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "time": "2018-01-22 16:20:16"
         },
         {
             "name": "myclabs/deep-copy",
@@ -2534,7 +2564,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "leo-galleguillos/html": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

@@ -33,6 +33,11 @@ class Module
                         $serviceManager->get('website')
                     );
                 },
+                WebsiteTable\Webpage::class => function ($serviceManager) {
+                    return new WebsiteTable\Webpage(
+                        $serviceManager->get('website')
+                    );
+                },
             ],
         ];
     }

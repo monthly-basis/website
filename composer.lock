@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fa7ba74bab639553de1731a762edbb38",
-    "content-hash": "561d68e2c1325ae865c56593a321397e",
+    "hash": "ea2242c5678ebdd8f2ed65aaecac7532",
+    "content-hash": "3704d242fb711d34c64be834106fa82a",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -98,12 +98,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LeoGalleguillos/Html.git",
-                "reference": "9573f70f161f5e37107656ca7b8e491a13237445"
+                "reference": "a662e02548f526bb6f3fd47d8d663dd2973345e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LeoGalleguillos/Html/zipball/9573f70f161f5e37107656ca7b8e491a13237445",
-                "reference": "9573f70f161f5e37107656ca7b8e491a13237445",
+                "url": "https://api.github.com/repos/LeoGalleguillos/Html/zipball/a662e02548f526bb6f3fd47d8d663dd2973345e5",
+                "reference": "a662e02548f526bb6f3fd47d8d663dd2973345e5",
                 "shasum": ""
             },
             "require": {
@@ -120,7 +120,37 @@
             "license": [
                 "MIT"
             ],
-            "time": "2018-01-22 16:20:16"
+            "time": "2018-01-22 17:37:44"
+        },
+        {
+            "name": "leo-galleguillos/string",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LeoGalleguillos/String.git",
+                "reference": "769f76ce38100ad2c6a80b543622e1b7f2988aba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LeoGalleguillos/String/zipball/769f76ce38100ad2c6a80b543622e1b7f2988aba",
+                "reference": "769f76ce38100ad2c6a80b543622e1b7f2988aba",
+                "shasum": ""
+            },
+            "require": {
+                "zendframework/zend-test": "^3.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LeoGalleguillos\\String\\": "src/",
+                    "LeoGalleguillos\\StringTest\\": "test/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "time": "2018-01-22 18:10:32"
         },
         {
             "name": "myclabs/deep-copy",
@@ -2565,7 +2595,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "leo-galleguillos/html": 20
+        "leo-galleguillos/html": 20,
+        "leo-galleguillos/string": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

@@ -1,6 +1,7 @@
 <?php
 namespace LeoGalleguillos\Website;
 
+use LeoGalleguillos\String\Model\Service as StringService;
 use LeoGalleguillos\Website\Model\Factory as WebsiteFactory;
 use LeoGalleguillos\Website\Model\Service as WebsiteService;
 use LeoGalleguillos\Website\Model\Table as WebsiteTable;
@@ -35,6 +36,11 @@ class Module
                 },
                 WebsiteService\Webpage\Html::class => function ($serviceManager) {
                     return new WebsiteService\Webpage\Html(
+                    );
+                },
+                WebsiteService\Webpage\Slug::class => function ($serviceManager) {
+                    return new WebsiteService\Webpage\Slug(
+                        $serviceManager->get(StringService\UrlFriendly::class)
                     );
                 },
                 WebsiteTable\Website::class => function ($serviceManager) {

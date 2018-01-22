@@ -45,7 +45,8 @@ class WebpageTest extends TestCase
         $webpageEntity = new WebsiteEntity\Webpage();
         $webpageEntity->setHtml($htmlEntity)
                       ->setTitle($arrayObject['title'])
-                      ->setUrl($arrayObject['url']);
+                      ->setUrl($arrayObject['url'])
+                      ->setWebpageId($arrayObject['webpage_id']);
         $this->assertEquals(
             $webpageEntity,
             $this->webpageFactory->buildFromArrayObject($arrayObject)

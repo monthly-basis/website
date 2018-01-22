@@ -25,7 +25,8 @@ class Webpage
         $webpageEntity = $this->buildInstance()
             ->setHtml($htmlEntity)
             ->setTitle($arrayObject['title'])
-            ->setUrl($arrayObject['url']);
+            ->setUrl($arrayObject['url'])
+            ->setWebpageId($arrayObject['webpage_id']);
 
         return $webpageEntity;
     }

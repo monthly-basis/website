@@ -50,4 +50,10 @@ class Webpage
         $this->url = $url;
         return $this;
     }
+
+    public function setWebpageId(int $webpageId)
+    {
+        $this->webpageId = $webpageId;
+        return $this;
+    }
 }

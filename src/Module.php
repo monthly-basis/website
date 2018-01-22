@@ -28,6 +28,10 @@ class Module
                         $serviceManager->get(WebsiteTable\Website::class)
                     );
                 },
+                WebsiteService\Webpage\Html::class => function ($serviceManager) {
+                    return new WebsiteService\Webpage\Html(
+                    );
+                },
                 WebsiteTable\Website::class => function ($serviceManager) {
                     return new WebsiteTable\Website(
                         $serviceManager->get('website')

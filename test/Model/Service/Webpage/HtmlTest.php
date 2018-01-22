@@ -21,10 +21,10 @@ class HtmlTest extends TestCase
         );
     }
 
-    public function testGetHtml()
+    public function testGetHtmlFromUrl()
     {
         $this->assertTrue(
-            is_string($this->htmlService->getHtml('https://imgur.com/'))
+            is_string($this->htmlService->getHtmlFromUrl('https://imgur.com/'))
         );
     }
 }

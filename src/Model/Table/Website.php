@@ -83,8 +83,9 @@ class Website
             SELECT `website`.`website_id`
                  , `website`.`domain`
                  , `website`.`name`
-                 , `website`.`google_analytics_tracking_id`
                  , `website`.`description`
+                 , `website`.`google_analytics_tracking_id`
+                 , `website`.`product_group_id`
               FROM `website`
              WHERE `website`.`domain` = ?
                  ;

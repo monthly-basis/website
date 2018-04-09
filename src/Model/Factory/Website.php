@@ -30,6 +30,12 @@ class Website
             );
         }
 
+        if (isset($array['product_group_id'])) {
+            $websiteEntity->setProductGroupId(
+                $array['product_group_id']
+            );
+        }
+
         return $websiteEntity;
     }
 

@@ -63,7 +63,11 @@ class WebpageTest extends TableTestCase
     {
         $this->websiteTable->insert(
             'www.cnn.com',
-            'CNN'
+            'CNN',
+            'ana',
+            1,
+            'st',
+            'ati'
         );
         $this->webpageTable->insertIgnore(
             1,

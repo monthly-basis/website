@@ -18,18 +18,24 @@ class Website
     public function insert(
         string $domain,
         string $name,
-        string $googleAnalyticsTrackingId = null
+        string $googleAnalyticsTrackingId = null,
+        int $productGroupId,
+        string $searchTable,
+        string $amazonTrackingId
     ) {
         $sql = '
             INSERT
-              INTO `website` (`domain`, `name`, `google_analytics_tracking_id`)
-            VALUES (?, ?, ?)
+              INTO `website` (`domain`, `name`, `google_analytics_tracking_id`, `product_group_id`, `search_table`, `amazon_tracking_id`)
+            VALUES (?, ?, ?, ?, ?, ?)
                  ;
         ';
         $parameters = [
             $domain,
             $name,
             $googleAnalyticsTrackingId,
+            $productGroupId,
+            $searchTable,
+            $amazonTrackingId,
         ];
         return $this->adapter
                     ->query($sql, $parameters)

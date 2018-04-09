@@ -50,7 +50,10 @@ class WebsiteTest extends TableTestCase
         $this->websiteTable->insert(
             'domain',
             'name',
-            'google analytics'
+            'google analytics',
+            1,
+            'search table',
+            'amazon tracking id'
         );
         $this->assertSame(
             1,

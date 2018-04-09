@@ -2,6 +2,7 @@
 namespace LeoGalleguillos\Website\Model\Table;
 
 use ArrayObject;
+use Exception;
 use Zend\Db\Adapter\Adapter;
 
 class Website
@@ -72,14 +73,16 @@ class Website
     {
         $sql = '
             SELECT `website`.`website_id`
-                 , `website`.`title`
-                 , `website`.`body`
-                 , `website`.`thumbnail_root_relative_path`
+                 , `website`.`name`
               FROM `website`
              WHERE `website`.`domain` = ?
                  ;
         ';
         $result = $this->adapter->query($sql)->execute([$domain])->current();
+
+        if (empty($result)) {
+            throw new Exception('Matching row not found.');
+        }
 
         return $result;
     }

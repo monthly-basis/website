@@ -2,6 +2,7 @@
 namespace LeoGalleguillos\WebsiteTest\Model\Table;
 
 use ArrayObject;
+use Exception;
 use LeoGalleguillos\Website\Model\Table as WebsiteTable;
 use LeoGalleguillos\WebsiteTest\TableTestCase;
 use Zend\Db\Adapter\Adapter;
@@ -55,5 +56,18 @@ class WebsiteTest extends TableTestCase
             1,
             $this->websiteTable->selectCount()
         );
+    }
+
+    public function testSelectWhereDomain()
+    {
+        try {
+            $this->websiteTable->selectWhereDomain('www.example.com');
+            $this->fail();
+        } catch (Exception $exception) {
+            $this->assertSame(
+                'Matching row not found.',
+                $exception->getMessage()
+            );
+        }
     }
 }

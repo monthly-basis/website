@@ -64,4 +64,23 @@ class Website
 
         return $result;
     }
+
+    /**
+     * @return array
+     */
+    public function selectWhereDomain(string $domain) : array
+    {
+        $sql = '
+            SELECT `website`.`website_id`
+                 , `website`.`title`
+                 , `website`.`body`
+                 , `website`.`thumbnail_root_relative_path`
+              FROM `website`
+             WHERE `website`.`domain` = ?
+                 ;
+        ';
+        $result = $this->adapter->query($sql)->execute([$domain])->current();
+
+        return $result;
+    }
 }

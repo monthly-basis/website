@@ -35,11 +35,11 @@ class WebsiteTest extends TestCase
             'website_id'                   => '12345',
         ];
         $websiteEntity = new WebsiteEntity\Website();
-        $websiteEntity->description = 'My example website';
-        $websiteEntity->domain = 'www.example.com';
-        $websiteEntity->googleAnalyticsTrackingId = 'example-tracking-id';
-        $websiteEntity->name = 'Example Name';
-        $websiteEntity->websiteId = '12345';
+        $websiteEntity->setDescription('My example website')
+                      ->setDomain('www.example.com')
+                      ->setGoogleAnalyticsTrackingId('example-tracking-id')
+                      ->setName('Example Name')
+                      ->setWebsiteId('12345');
 
         $this->assertEquals(
             $websiteEntity,

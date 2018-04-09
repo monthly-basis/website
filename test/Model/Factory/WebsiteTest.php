@@ -27,13 +27,13 @@ class WebsiteTest extends TestCase
 
     public function testBuildFromArrayObject()
     {
-        $arrayObject = new ArrayObject([
+        $arrayObject = [
             'description'                  => 'My example website',
             'domain'                       => 'www.example.com',
             'google_analytics_tracking_id' => 'example-tracking-id',
             'name'                         => 'Example Name',
             'website_id'                   => '12345',
-        ]);
+        ];
         $websiteEntity = new WebsiteEntity\Website();
         $websiteEntity->description = 'My example website';
         $websiteEntity->domain = 'www.example.com';
@@ -43,7 +43,7 @@ class WebsiteTest extends TestCase
 
         $this->assertEquals(
             $websiteEntity,
-            $this->websiteFactory->buildFromArrayObject($arrayObject)
+            $this->websiteFactory->buildFromArray($arrayObject)
         );
     }
 

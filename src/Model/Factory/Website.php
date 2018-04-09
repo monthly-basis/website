@@ -15,18 +15,18 @@ class Website
         $this->websiteTable = $websiteTable;
     }
 
-    public function buildFromArrayObject(
-        ArrayObject $arrayObject
+    public function buildFromArray(
+        array $array
     ) : WebsiteEntity\Website {
         $websiteEntity = $this->buildInstance()
-            ->setDescription($arrayObject['description'])
-            ->setDomain($arrayObject['domain'])
-            ->setName($arrayObject['name'])
-            ->setWebsiteId($arrayObject['website_id']);
+            ->setDescription($array['description'])
+            ->setDomain($array['domain'])
+            ->setName($array['name'])
+            ->setWebsiteId($array['website_id']);
 
-        if (isset($arrayObject['google_analytics_tracking_id'])) {
+        if (isset($array['google_analytics_tracking_id'])) {
             $websiteEntity->setGoogleAnalyticsTrackingId(
-                $arrayObject['google_analytics_tracking_id']
+                $array['google_analytics_tracking_id']
             );
         }
 
@@ -38,7 +38,7 @@ class Website
         $arrayObject = $this->websiteTable->selectWhereDomain(
             $_SERVER['HTTP_HOST']
         );
-        return $this->buildFromArrayObject($arrayObject);
+        return $this->buildFromArray($arrayObject);
     }
 
     protected function buildInstance() : WebsiteEntity\Website

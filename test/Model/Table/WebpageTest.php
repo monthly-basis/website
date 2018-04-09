@@ -65,6 +65,7 @@ class WebpageTest extends TableTestCase
             'www.cnn.com',
             'CNN',
             'ana',
+            'description',
             1,
             'st',
             'ati'

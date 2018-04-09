@@ -18,6 +18,7 @@ class Website
     public function insert(
         string $domain,
         string $name,
+        string $description,
         string $googleAnalyticsTrackingId = null,
         int $productGroupId,
         string $searchTable,
@@ -25,13 +26,14 @@ class Website
     ) {
         $sql = '
             INSERT
-              INTO `website` (`domain`, `name`, `google_analytics_tracking_id`, `product_group_id`, `search_table`, `amazon_tracking_id`)
-            VALUES (?, ?, ?, ?, ?, ?)
+              INTO `website` (`domain`, `name`, `description`, `google_analytics_tracking_id`, `product_group_id`, `search_table`, `amazon_tracking_id`)
+            VALUES (?, ?, ?, ?, ?, ?, ?)
                  ;
         ';
         $parameters = [
             $domain,
             $name,
+            $description,
             $googleAnalyticsTrackingId,
             $productGroupId,
             $searchTable,
@@ -79,7 +81,10 @@ class Website
     {
         $sql = '
             SELECT `website`.`website_id`
+                 , `website`.`domain`
                  , `website`.`name`
+                 , `website`.`google_analytics_tracking_id`
+                 , `website`.`description`
               FROM `website`
              WHERE `website`.`domain` = ?
                  ;

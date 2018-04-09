@@ -50,6 +50,7 @@ class WebsiteTest extends TableTestCase
         $this->websiteTable->insert(
             'domain',
             'name',
+            'description',
             'google analytics',
             1,
             'search table',

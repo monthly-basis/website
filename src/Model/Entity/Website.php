@@ -14,7 +14,7 @@ class Website
     public $domain;
 
     /**
-     * @var string|null
+     * @var string
      */
     public $googleAnalyticsTrackingId;
 
@@ -43,7 +43,7 @@ class Website
         return $this->domain;
     }
 
-    public function getGoogleAnalyticsTrackingId()
+    public function getGoogleAnalyticsTrackingId() : string
     {
         return $this->googleAnalyticsTrackingId;
     }
@@ -70,7 +70,7 @@ class Website
         return $this;
     }
 
-    public function setGoogleAnalyticsTrackingId(string $googleAnalyticsTrackingId = null)
+    public function setGoogleAnalyticsTrackingId(string $googleAnalyticsTrackingId)
     {
         $this->googleAnalyticsTrackingId = $googleAnalyticsTrackingId;
         return $this;

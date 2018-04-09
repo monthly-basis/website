@@ -57,16 +57,6 @@ class WebsiteTest extends TestCase
             $this->websiteEntity->getGoogleAnalyticsTrackingId()
         );
 
-        $value = null;
-        $this->assertSame(
-            $this->websiteEntity,
-            $this->websiteEntity->setGoogleAnalyticsTrackingId($value)
-        );
-        $this->assertSame(
-            $value,
-            $this->websiteEntity->getGoogleAnalyticsTrackingId()
-        );
-
         $value = 'name';
         $this->assertSame(
             $this->websiteEntity,

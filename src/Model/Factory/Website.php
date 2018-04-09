@@ -21,9 +21,14 @@ class Website
         $websiteEntity = $this->buildInstance()
             ->setDescription($arrayObject['description'])
             ->setDomain($arrayObject['domain'])
-            ->setGoogleAnalyticsTrackingId($arrayObject['google_analytics_tracking_id'])
             ->setName($arrayObject['name'])
             ->setWebsiteId($arrayObject['website_id']);
+
+        if (isset($arrayObject['google_analytics_tracking_id'])) {
+            $websiteEntity->setGoogleAnalyticsTrackingId(
+                $arrayObject['google_analytics_tracking_id']
+            );
+        }
 
         return $websiteEntity;
     }

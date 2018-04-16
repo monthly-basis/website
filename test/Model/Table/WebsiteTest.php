@@ -53,7 +53,6 @@ class WebsiteTest extends TableTestCase
             'description',
             'google analytics',
             1,
-            'search table',
             'amazon tracking id'
         );
         $this->assertSame(

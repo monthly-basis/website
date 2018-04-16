@@ -21,13 +21,12 @@ class Website
         string $description,
         string $googleAnalyticsTrackingId = null,
         int $productGroupId,
-        string $searchTable,
         string $amazonTrackingId
     ) {
         $sql = '
             INSERT
-              INTO `website` (`domain`, `name`, `description`, `google_analytics_tracking_id`, `product_group_id`, `search_table`, `amazon_tracking_id`)
-            VALUES (?, ?, ?, ?, ?, ?, ?)
+              INTO `website` (`domain`, `name`, `description`, `google_analytics_tracking_id`, `product_group_id`, `amazon_tracking_id`)
+            VALUES (?, ?, ?, ?, ?, ?)
                  ;
         ';
         $parameters = [
@@ -36,7 +35,6 @@ class Website
             $description,
             $googleAnalyticsTrackingId,
             $productGroupId,
-            $searchTable,
             $amazonTrackingId,
         ];
         return $this->adapter

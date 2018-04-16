@@ -21,7 +21,7 @@ class Website
         string $description,
         string $googleAnalyticsTrackingId = null,
         int $productGroupId,
-        string $amazonTrackingId
+        string $amazonTrackingId = null
     ) {
         $sql = '
             INSERT

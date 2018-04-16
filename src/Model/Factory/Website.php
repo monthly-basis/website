@@ -24,6 +24,12 @@ class Website
             ->setName($array['name'])
             ->setWebsiteId($array['website_id']);
 
+        if (isset($array['amazon_tracking_id'])) {
+            $websiteEntity->setAmazonTrackingId(
+                $array['amazon_tracking_id']
+            );
+        }
+
         if (isset($array['google_analytics_tracking_id'])) {
             $websiteEntity->setGoogleAnalyticsTrackingId(
                 $array['google_analytics_tracking_id']

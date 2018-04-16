@@ -5,6 +5,8 @@ use LeoGalleguillos\Website\Model\Entity as WebsiteEntity;
 
 class Website
 {
+    protected $amazonTrackingId;
+
     /**
      * @var string
      */
@@ -39,6 +41,11 @@ class Website
      * @var int
      */
     public $websiteId;
+
+    public function getAmazonTrackingId()
+    {
+        return $this->amazonTrackingId;
+    }
 
     /**
      * Get description.
@@ -78,6 +85,12 @@ class Website
     public function getWebsiteId()
     {
         return $this->websiteId;
+    }
+
+    public function setAmazonTrackingId(string $amazonTrackingId)
+    {
+        $this->amazonTrackingId = $amazonTrackingId;
+        return $this;
     }
 
     public function setDescription(string $description)

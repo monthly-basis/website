@@ -60,9 +60,12 @@ class Website
     {
         $sql = '
             SELECT `website`.`website_id`
-                 , `website`.`title`
-                 , `website`.`body`
-                 , `website`.`thumbnail_root_relative_path`
+                 , `website`.`domain`
+                 , `website`.`name`
+                 , `website`.`description`
+                 , `website`.`google_analytics_tracking_id`
+                 , `website`.`product_group_id`
+                 , `website`.`facebook_app_id`
               FROM `website`
              WHERE `website`.`website_id` = ?
                  ;
@@ -84,6 +87,7 @@ class Website
                  , `website`.`description`
                  , `website`.`google_analytics_tracking_id`
                  , `website`.`product_group_id`
+                 , `website`.`facebook_app_id`
               FROM `website`
              WHERE `website`.`domain` = ?
                  ;

@@ -33,6 +33,7 @@ class WebsiteTest extends TestCase
             'google_analytics_tracking_id' => 'example-tracking-id',
             'name'                         => 'Example Name',
             'website_id'                   => '12345',
+            'amazon_tracking_id'              => 'amazon-20',
             'facebook_app_id'              => '12345',
         ];
         $websiteEntity = new WebsiteEntity\Website();
@@ -41,6 +42,7 @@ class WebsiteTest extends TestCase
                       ->setGoogleAnalyticsTrackingId('example-tracking-id')
                       ->setName('Example Name')
                       ->setWebsiteId('12345')
+                      ->setAmazonTrackingId('amazon-20')
                       ->setFacebookAppId('12345');
 
         $this->assertEquals(

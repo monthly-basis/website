@@ -65,6 +65,7 @@ class Website
                  , `website`.`description`
                  , `website`.`google_analytics_tracking_id`
                  , `website`.`product_group_id`
+                 , `website`.`amazon_tracking_id`
                  , `website`.`facebook_app_id`
               FROM `website`
              WHERE `website`.`website_id` = ?
@@ -87,6 +88,7 @@ class Website
                  , `website`.`description`
                  , `website`.`google_analytics_tracking_id`
                  , `website`.`product_group_id`
+                 , `website`.`amazon_tracking_id`
                  , `website`.`facebook_app_id`
               FROM `website`
              WHERE `website`.`domain` = ?

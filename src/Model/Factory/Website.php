@@ -36,6 +36,12 @@ class Website
             );
         }
 
+        if (isset($array['facebook_app_id'])) {
+            $websiteEntity->setFacebookAppId(
+                $array['facebook_app_id']
+            );
+        }
+
         return $websiteEntity;
     }
 

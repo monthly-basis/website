@@ -1,6 +1,8 @@
 <?php
 namespace LeoGalleguillos\Website\Model\Entity;
 
+use LeoGalleguillos\Website\Model\Entity as WebsiteEntity;
+
 class Website
 {
     /**
@@ -12,6 +14,11 @@ class Website
      * @var string
      */
     public $domain;
+
+    /**
+     * @var int
+     */
+    public $facebookAppId;
 
     /**
      * @var string
@@ -48,6 +55,11 @@ class Website
         return $this->domain;
     }
 
+    public function getFacebookAppId() : int
+    {
+        return $this->facebookAppId;
+    }
+
     public function getGoogleAnalyticsTrackingId() : string
     {
         return $this->googleAnalyticsTrackingId;
@@ -71,6 +83,12 @@ class Website
     public function setDescription(string $description)
     {
         $this->description = $description;
+        return $this;
+    }
+
+    public function setFacebookAppId(int $facebookAppId) : WebsiteEntity\Website
+    {
+        $this->facebookAppId = $facebookAppId;
         return $this;
     }
 

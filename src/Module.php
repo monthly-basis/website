@@ -45,6 +45,9 @@ class Module
                     return new WebsiteService\Webpage\Html(
                     );
                 },
+                WebsiteService\Webpage\HttpStatusCode::class => function ($serviceManager) {
+                    return new WebsiteService\Webpage\HttpStatusCode();
+                },
                 WebsiteService\Webpage\Slug::class => function ($serviceManager) {
                     return new WebsiteService\Webpage\Slug(
                         $serviceManager->get(StringService\UrlFriendly::class)

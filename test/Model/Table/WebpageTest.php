@@ -54,7 +54,7 @@ class WebpageTest extends TableTestCase
             '<html><body>this is the html</body></html>'
         );
         $this->assertSame(
-            0,
+            1,
             $this->webpageTable->selectCount()
         );
     }

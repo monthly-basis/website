@@ -11,11 +11,23 @@ class Webpage
     protected $html;
 
     /**
-     * var string
+     * @var string
      */
     protected $title;
+
+    /**
+     * @var string
+     */
     protected $url;
+
+    /**
+     * @var int
+     */
     protected $webpageId;
+
+    /**
+     * @var int
+     */
     protected $websiteId;
 
     public function getHtml()

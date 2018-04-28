@@ -46,4 +46,22 @@ class WebpageHttpStatusCodeLogTest extends TableTestCase
             $this->webpageHttpStatusCodeLogTable
         );
     }
+
+    public function testInsertAndSelectCount()
+    {
+        $this->assertSame(
+            0,
+            $this->webpageHttpStatusCodeLogTable->selectCount()
+        );
+
+        $this->webpageHttpStatusCodeLogTable->insert(
+            123,
+            404
+        );
+
+        $this->assertSame(
+            1,
+            $this->webpageHttpStatusCodeLogTable->selectCount()
+        );
+    }
 }

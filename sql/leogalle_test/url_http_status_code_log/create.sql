@@ -4,5 +4,6 @@ CREATE TABLE `url_http_status_code_log` (
     `http_status_code` INT(3) NOT NULL,
     `timestamp` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(),
     PRIMARY KEY (`url_http_status_code_log_id`),
-    INDEX (`url`)
+    INDEX (`url`),
+    INDEX (`http_status_code`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

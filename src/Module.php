@@ -53,6 +53,11 @@ class Module
                         $serviceManager->get(StringService\UrlFriendly::class)
                     );
                 },
+                WebsiteService\Webpage\Url\WasCurledRecently::class => function ($serviceManager) {
+                    return new WebsiteService\Webpage\Url\WasCurledRecently(
+                        $serviceManager->get(WebsiteTable\UrlHttpStatusCodeLog::class)
+                    );
+                },
                 WebsiteService\Website::class => function ($serviceManager) {
                     return new WebsiteService\Website(
                         $serviceManager->get(WebsiteFactory\Website::class)

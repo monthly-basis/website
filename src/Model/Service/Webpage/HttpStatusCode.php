@@ -16,7 +16,7 @@ class HttpStatusCode
     ) : int {
 		$handle = curl_init($webpageEntity->getUrl());
 		curl_setopt($handle,  CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($handle, CURLOPT_CONNECTTIMEOUT, 10);
+        curl_setopt($handle, CURLOPT_CONNECTTIMEOUT, 3);
 
 		$response = curl_exec($handle);
 

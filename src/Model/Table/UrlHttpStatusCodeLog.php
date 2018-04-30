@@ -3,7 +3,7 @@ namespace LeoGalleguillos\Website\Model\Table;
 
 use Zend\Db\Adapter\Adapter;
 
-class WebpageHttpStatusCodeLog
+class UrlHttpStatusCodeLog
 {
     public function __construct(Adapter $adapter)
     {
@@ -14,18 +14,18 @@ class WebpageHttpStatusCodeLog
      * @return int Primary key
      */
     public function insert(
-        int $webpageId,
+        string $url,
         int $statusCode
     ) {
         $sql = '
             INSERT
-              INTO `webpage_http_status_code_log`
-                   (`webpage_id`, `http_status_code`)
+              INTO `url_http_status_code_log`
+                   (`url`, `http_status_code`)
             VALUES (?, ?)
                  ;
         ';
         $parameters = [
-            $webpageId,
+            $url,
             $statusCode,
         ];
         return $this->adapter
@@ -38,7 +38,7 @@ class WebpageHttpStatusCodeLog
     {
         $sql = '
             SELECT COUNT(*) AS `count`
-              FROM `webpage_http_status_code_log`
+              FROM `url_http_status_code_log`
                  ;
         ';
         $row = $this->adapter->query($sql)->execute()->current();

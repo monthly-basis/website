@@ -7,19 +7,19 @@ use LeoGalleguillos\WebsiteTest\TableTestCase;
 use Zend\Db\Adapter\Adapter;
 use PHPUnit\Framework\TestCase;
 
-class WebpageHttpStatusCodeLogTest extends TableTestCase
+class UrlHttpStatusCodeLogTest extends TableTestCase
 {
     /**
      * @var string
      */
-    protected $sqlPath = __DIR__ . '/../../..' . '/sql/leogalle_test/webpage_http_status_code_log/';
+    protected $sqlPath = __DIR__ . '/../../..' . '/sql/leogalle_test/url_http_status_code_log/';
 
     protected function setUp()
     {
         $configArray     = require(__DIR__ . '/../../../config/autoload/local.php');
         $configArray     = $configArray['db']['adapters']['leogalle_test'];
         $this->adapter         = new Adapter($configArray);
-        $this->webpageHttpStatusCodeLogTable  = new WebsiteTable\WebpageHttpStatusCodeLog(
+        $this->urlHttpStatusCodeLogTable  = new WebsiteTable\UrlHttpStatusCodeLog(
             $this->adapter
         );
 
@@ -42,8 +42,8 @@ class WebpageHttpStatusCodeLogTest extends TableTestCase
     public function testInitialize()
     {
         $this->assertInstanceOf(
-            WebsiteTable\WebpageHttpStatusCodeLog::class,
-            $this->webpageHttpStatusCodeLogTable
+            WebsiteTable\UrlHttpStatusCodeLog::class,
+            $this->urlHttpStatusCodeLogTable
         );
     }
 
@@ -51,17 +51,17 @@ class WebpageHttpStatusCodeLogTest extends TableTestCase
     {
         $this->assertSame(
             0,
-            $this->webpageHttpStatusCodeLogTable->selectCount()
+            $this->urlHttpStatusCodeLogTable->selectCount()
         );
 
-        $this->webpageHttpStatusCodeLogTable->insert(
-            123,
+        $this->urlHttpStatusCodeLogTable->insert(
+            'https://www.yahoo.com/does-not-exist',
             404
         );
 
         $this->assertSame(
             1,
-            $this->webpageHttpStatusCodeLogTable->selectCount()
+            $this->urlHttpStatusCodeLogTable->selectCount()
         );
     }
 }

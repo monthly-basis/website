@@ -64,4 +64,28 @@ class UrlHttpStatusCodeLogTest extends TableTestCase
             $this->urlHttpStatusCodeLogTable->selectCount()
         );
     }
+
+    public function testSelectCountWhereUrl()
+    {
+        $url = 'https://www.yahoo.com/does-not-exist';
+        $this->assertSame(
+            0,
+            $this->urlHttpStatusCodeLogTable->selectCountWhereUrl($url)
+        );
+
+        $this->urlHttpStatusCodeLogTable->insert(
+            'https://www.yahoo.com/does-not-exist',
+            404
+        );
+        $this->assertSame(
+            1,
+            $this->urlHttpStatusCodeLogTable->selectCountWhereUrl($url)
+        );
+
+        $url = 'https://www.reddit.com/';
+        $this->assertSame(
+            0,
+            $this->urlHttpStatusCodeLogTable->selectCountWhereUrl($url)
+        );
+    }
 }

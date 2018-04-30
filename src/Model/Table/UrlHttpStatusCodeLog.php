@@ -44,4 +44,20 @@ class UrlHttpStatusCodeLog
         $row = $this->adapter->query($sql)->execute()->current();
         return (int) $row['count'];
     }
+
+    public function selectCountWhereUrl(
+        string $url
+    ) : int {
+        $sql = '
+            SELECT COUNT(*) AS `count`
+              FROM `url_http_status_code_log`
+             WHERE `url` = ?
+                 ;
+        ';
+        $parameters = [
+            $url,
+        ];
+        $row = $this->adapter->query($sql)->execute($parameters)->current();
+        return (int) $row['count'];
+    }
 }

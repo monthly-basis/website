@@ -58,6 +58,11 @@ class Module
                         $serviceManager->get(WebsiteFactory\Website::class)
                     );
                 },
+                WebsiteTable\UrlHttpStatusCodeLog::class => function ($serviceManager) {
+                    return new WebsiteTable\UrlHttpStatusCodeLog(
+                        $serviceManager->get('main')
+                    );
+                },
                 WebsiteTable\Website::class => function ($serviceManager) {
                     return new WebsiteTable\Website(
                         $serviceManager->get('main')

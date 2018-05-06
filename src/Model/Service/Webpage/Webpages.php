@@ -21,7 +21,7 @@ class Webpages
      * @return Generator
      * @yield WebsiteEntity\Webpage
      */
-    public function getWebpages() : string
+    public function getWebpages() : Generator
     {
         foreach ($this->webpageTable->select() as $array) {
             yield $this->webpageFactory->buildFromArray($array);

@@ -1,7 +1,6 @@
 <?php
 namespace LeoGalleguillos\Website\Model\Table;
 
-use ArrayObject;
 use Generator;
 use Zend\Db\Adapter\Adapter;
 
@@ -70,9 +69,9 @@ class Webpage
     }
 
     /**
-     * @return ArrayObject
+     * @return array
      */
-    public function selectWhereWebpageId(int $webpageId) : ArrayObject
+    public function selectWhereWebpageId(int $webpageId) : array
     {
         $sql = '
             SELECT `webpage`.`webpage_id`
@@ -84,7 +83,7 @@ class Webpage
              WHERE `webpage`.`webpage_id` = ?
                  ;
         ';
-        $result = $this->adapter->query($sql, [$webpageId])->current();
+        $result = $this->adapter->query($sql)->execute([$webpageId])->current();
 
         return $result;
     }

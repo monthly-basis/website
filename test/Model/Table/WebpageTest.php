@@ -76,15 +76,15 @@ class WebpageTest extends TableTestCase
             'title',
             'html'
         );
-        $arrayObject = new ArrayObject([
+        $array = [
             'webpage_id' => '1',
             'website_id' => '1',
             'url' => 'url',
             'title' => 'title',
             'html' => 'html',
-        ]);
-        $this->assertEquals(
-            $arrayObject,
+        ];
+        $this->assertSame(
+            $array,
             $this->webpageTable->selectWhereWebpageId(1)
         );
     }

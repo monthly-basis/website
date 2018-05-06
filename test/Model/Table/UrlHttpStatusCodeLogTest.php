@@ -1,7 +1,6 @@
 <?php
 namespace LeoGalleguillos\WebsiteTest\Model\Table;
 
-use ArrayObject;
 use LeoGalleguillos\Website\Model\Table as WebsiteTable;
 use LeoGalleguillos\WebsiteTest\TableTestCase;
 use Zend\Db\Adapter\Adapter;

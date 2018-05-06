@@ -2,6 +2,7 @@
 namespace LeoGalleguillos\Website\Model\Table;
 
 use ArrayObject;
+use Generator;
 use Zend\Db\Adapter\Adapter;
 
 class Webpage
@@ -35,6 +36,26 @@ class Webpage
         return $this->adapter
                     ->query($sql, $parameters)
                     ->getGeneratedValue();
+    }
+
+    /**
+     * @yield array
+     * @return Generator
+     */
+    public function select() : Generator
+    {
+        $sql = '
+            SELECT `webpage`.`webpage_id`
+                 , `webpage`.`website_id`
+                 , `webpage`.`url`
+                 , `webpage`.`title`
+                 , `webpage`.`html`
+              FROM `webpage`
+                 ;
+        ';
+        foreach ($this->adapter->query($sql)->execute() as $array) {
+            yield $array;
+        }
     }
 
     public function selectCount()

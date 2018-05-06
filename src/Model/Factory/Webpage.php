@@ -1,7 +1,6 @@
 <?php
 namespace LeoGalleguillos\Website\Model\Factory;
 
-use ArrayObject;
 use LeoGalleguillos\Html\Model\Entity as HtmlEntity;
 use LeoGalleguillos\Website\Model\Entity as WebsiteEntity;
 use LeoGalleguillos\Website\Model\Table as WebsiteTable;

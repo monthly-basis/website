@@ -16,27 +16,27 @@ class Webpage
         $this->webpageTable = $webpageTable;
     }
 
-    public function buildFromArrayObject(
-        ArrayObject $arrayObject
+    public function buildFromArray(
+        array $array
     ) : WebsiteEntity\Webpage {
         $htmlEntity = new HtmlEntity\Html();
-        $htmlEntity->setString($arrayObject['html']);
+        $htmlEntity->setString($array['html']);
 
         $webpageEntity = $this->buildInstance()
             ->setHtml($htmlEntity)
-            ->setTitle($arrayObject['title'])
-            ->setUrl($arrayObject['url'])
-            ->setWebpageId($arrayObject['webpage_id']);
+            ->setTitle($array['title'])
+            ->setUrl($array['url'])
+            ->setWebpageId($array['webpage_id']);
 
         return $webpageEntity;
     }
 
     public function buildFromWebpageId(int $webpageId) : WebsiteEntity\Webpage
     {
-        $arrayObject = $this->webpageTable->selectWhereWebpageId(
+        $array = $this->webpageTable->selectWhereWebpageId(
             $webpageId
         );
-        return $this->buildFromArrayObject($arrayObject);
+        return $this->buildFromArray($array);
     }
 
     protected function buildInstance() : WebsiteEntity\Webpage

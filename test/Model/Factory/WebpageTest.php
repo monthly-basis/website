@@ -29,15 +29,15 @@ class WebpageTest extends TestCase
         );
     }
 
-    public function testbuildFromArrayObject()
+    public function testbuildFromArray()
     {
-        $arrayObject = new ArrayObject([
+        $arrayObject = [
             'webpage_id' => '1',
             'website_id' => '1',
             'url' => 'url',
             'title' => 'title',
             'html' => 'html',
-        ]);
+        ];
 
         $htmlEntity = new HtmlEntity\Html();
         $htmlEntity->setString($arrayObject['html']);
@@ -49,7 +49,7 @@ class WebpageTest extends TestCase
                       ->setWebpageId($arrayObject['webpage_id']);
         $this->assertEquals(
             $webpageEntity,
-            $this->webpageFactory->buildFromArrayObject($arrayObject)
+            $this->webpageFactory->buildFromArray($arrayObject)
         );
     }
 }

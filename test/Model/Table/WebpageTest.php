@@ -45,7 +45,7 @@ class WebpageTest extends TableTestCase
         $this->assertInstanceOf(WebsiteTable\Webpage::class, $this->webpageTable);
     }
 
-    public function testInsert()
+    public function testInsertIgnore()
     {
         $this->webpageTable->insertIgnore(
             1,

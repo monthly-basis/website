@@ -77,6 +77,27 @@ class Webpage
     }
 
     /**
+     * @return Generator
+     * @yield array
+     */
+    public function selectWebpageIdWhereWebpageIdGreaterThan(
+        int $webpageId
+    ) : Generator {
+        $sql = '
+            SELECT `webpage`.`webpage_id`
+              FROM `webpage`
+             WHERE `webpage`.`webpage_id` > ?
+                 ;
+        ';
+        $parameters = [
+            $webpageId,
+        ];
+        foreach ($this->adapter->query($sql)->execute($parameters) as $array) {
+            yield $array;
+        }
+    }
+
+    /**
      * @return array
      */
     public function selectWhereWebpageId(int $webpageId) : array

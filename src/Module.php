@@ -75,7 +75,7 @@ class Module
                 },
                 WebsiteTable\Webpage::class => function ($serviceManager) {
                     return new WebsiteTable\Webpage(
-                        $serviceManager->get('website')
+                        $serviceManager->get('main')
                     );
                 },
             ],

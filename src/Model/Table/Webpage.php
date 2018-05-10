@@ -15,7 +15,7 @@ class Webpage
      * @return int Primary key
      */
     public function insertIgnore(
-        int $websiteId,
+        int $websiteId = null,
         string $url,
         string $title,
         string $html

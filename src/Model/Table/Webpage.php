@@ -93,7 +93,7 @@ class Webpage
             $webpageId,
         ];
         foreach ($this->adapter->query($sql)->execute($parameters) as $array) {
-            yield $array;
+            yield $array['webpage_id'];
         }
     }
 

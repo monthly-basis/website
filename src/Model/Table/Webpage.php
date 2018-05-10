@@ -1,6 +1,7 @@
 <?php
 namespace LeoGalleguillos\Website\Model\Table;
 
+use Exception;
 use Generator;
 use Zend\Db\Adapter\Adapter;
 
@@ -32,9 +33,16 @@ class Webpage
             $title,
             $html,
         ];
-        return $this->adapter
-                    ->query($sql, $parameters)
-                    ->getGeneratedValue();
+        $webpageId = $this->adapter
+                          ->query($sql)
+                          ->execute($parameters)
+                          ->getGeneratedValue();
+
+        if (empty($webpageId)) {
+            throw new Exception('Unable to insert.');
+        }
+
+        return $webpageId;
     }
 
     /**

@@ -32,7 +32,7 @@ class Webpage
 
     public function getHtmlEntity() : HtmlEntity\Html
     {
-        return $this->html;
+        return $this->htmlEntity;
     }
 
     public function getTitle()

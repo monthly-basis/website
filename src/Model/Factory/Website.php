@@ -1,10 +1,9 @@
 <?php
 namespace LeoGalleguillos\Website\Model\Factory;
 
-use ArrayObject;
 use LeoGalleguillos\Website\Model\Entity as WebsiteEntity;
 use LeoGalleguillos\Website\Model\Table as WebsiteTable;
-use Application\Model\Table as ApplicationTable;
+use TypeError;
 use Zend\Db\Adapter\Adapter;
 
 class Website
@@ -19,10 +18,15 @@ class Website
         array $array
     ) : WebsiteEntity\Website {
         $websiteEntity = $this->buildInstance()
-            ->setDescription($array['description'])
             ->setDomain($array['domain'])
             ->setName($array['name'])
             ->setWebsiteId($array['website_id']);
+
+        try {
+            $websiteEntity->setDescription($array['description']);
+        } catch (TypeError $typeError) {
+            // Do nothing.
+        }
 
         if (isset($array['amazon_tracking_id'])) {
             $websiteEntity->setAmazonTrackingId(

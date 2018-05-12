@@ -43,7 +43,7 @@ class WebpageTest extends TestCase
         $htmlEntity->setString($arrayObject['html']);
 
         $webpageEntity = new WebsiteEntity\Webpage();
-        $webpageEntity->setHtml($htmlEntity)
+        $webpageEntity->setHtmlEntity($htmlEntity)
                       ->setTitle($arrayObject['title'])
                       ->setUrl($arrayObject['url'])
                       ->setWebpageId($arrayObject['webpage_id']);

@@ -13,11 +13,17 @@ class WebpageTest extends TestCase
 
     public function testInitialize()
     {
-        $this->assertInstanceOf(WebsiteEntity\Webpage::class, $this->webpage);
+        $this->assertInstanceOf(
+            WebsiteEntity\Webpage::class,
+            $this->webpage
+        );
     }
 
     public function testAttributes()
     {
-        $this->assertObjectHasAttribute('html', $this->webpage);
+        $this->assertObjectHasAttribute(
+            'htmlEntity',
+            $this->webpage
+        );
     }
 }

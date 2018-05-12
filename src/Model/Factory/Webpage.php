@@ -22,7 +22,7 @@ class Webpage
         $htmlEntity->setString($array['html']);
 
         $webpageEntity = $this->buildInstance()
-            ->setHtml($htmlEntity)
+            ->setHtmlEntity($htmlEntity)
             ->setTitle($array['title'])
             ->setUrl($array['url'])
             ->setWebpageId($array['webpage_id']);

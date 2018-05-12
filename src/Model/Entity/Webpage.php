@@ -8,7 +8,7 @@ class Webpage
     /**
      * @var HtmlEntity\Html
      */
-    protected $html;
+    protected $htmlEntity;
 
     /**
      * @var string
@@ -30,7 +30,7 @@ class Webpage
      */
     protected $websiteId;
 
-    public function getHtml()
+    public function getHtmlEntity() : HtmlEntity\Html
     {
         return $this->html;
     }
@@ -45,9 +45,9 @@ class Webpage
         return $this->url;
     }
 
-    public function setHtml(HtmlEntity\Html $html)
+    public function setHtmlEntity(HtmlEntity\Html $htmlEntity)
     {
-        $this->html = $html;
+        $this->htmlEntity = $htmlEntity;
         return $this;
     }
 

@@ -18,12 +18,17 @@ class Website
         array $array
     ) : WebsiteEntity\Website {
         $websiteEntity = $this->buildInstance()
-            ->setDomain($array['domain'])
             ->setName($array['name'])
             ->setWebsiteId($array['website_id']);
 
         try {
             $websiteEntity->setDescription($array['description']);
+        } catch (TypeError $typeError) {
+            // Do nothing.
+        }
+
+        try {
+            $websiteEntity->setDomain($array['domain']);
         } catch (TypeError $typeError) {
             // Do nothing.
         }

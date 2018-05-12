@@ -19,7 +19,7 @@ class Webpage
         int $websiteId = null,
         string $url,
         string $title,
-        string $html
+        string $html = null
     ) {
         $sql = '
             INSERT IGNORE

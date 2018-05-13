@@ -4,7 +4,7 @@ namespace LeoGalleguillos\Website\Model\Factory;
 use LeoGalleguillos\Html\Model\Entity as HtmlEntity;
 use LeoGalleguillos\Website\Model\Entity as WebsiteEntity;
 use LeoGalleguillos\Website\Model\Table as WebsiteTable;
-use Application\Model\Table as ApplicationTable;
+use TypeError;
 use Zend\Db\Adapter\Adapter;
 
 class Webpage
@@ -19,7 +19,12 @@ class Webpage
         array $array
     ) : WebsiteEntity\Webpage {
         $htmlEntity = new HtmlEntity\Html();
-        $htmlEntity->setString($array['html']);
+
+        try {
+            $htmlEntity->setString($array['html']);
+        } catch (TypeError $typeError) {
+            // Do nothing.
+        }
 
         $webpageEntity = $this->buildInstance()
             ->setHtmlEntity($htmlEntity)

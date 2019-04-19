@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3704d242fb711d34c64be834106fa82a",
+    "content-hash": "bea3e7f2fa8b70880303438e6f162c10",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -150,6 +150,37 @@
                 "MIT"
             ],
             "time": "2019-04-10T20:34:32+00:00"
+        },
+        {
+            "name": "leo-galleguillos/test",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LeoGalleguillos/Test.git",
+                "reference": "0ea1f67f70d706f08e9e382bea8ae178001e051b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LeoGalleguillos/Test/zipball/0ea1f67f70d706f08e9e382bea8ae178001e051b",
+                "reference": "0ea1f67f70d706f08e9e382bea8ae178001e051b",
+                "shasum": ""
+            },
+            "require": {
+                "zendframework/zend-db": "^2.9",
+                "zendframework/zend-test": "^3.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LeoGalleguillos\\Test\\": "src/",
+                    "LeoGalleguillos\\TestTest\\": "test/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "time": "2019-03-11T11:59:50+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -2720,7 +2751,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "leo-galleguillos/html": 20,
-        "leo-galleguillos/string": 20
+        "leo-galleguillos/string": 20,
+        "leo-galleguillos/test": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

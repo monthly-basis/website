@@ -45,12 +45,6 @@ class Website
             );
         }
 
-        if (isset($array['product_group_id'])) {
-            $websiteEntity->setProductGroupId(
-                $array['product_group_id']
-            );
-        }
-
         if (isset($array['facebook_app_id'])) {
             $websiteEntity->setFacebookAppId(
                 $array['facebook_app_id']

@@ -38,11 +38,6 @@ class Website
     /**
      * @var int
      */
-    public $productGroupId;
-
-    /**
-     * @var int
-     */
     public $websiteId;
 
     public function getAmazonTrackingId()
@@ -73,11 +68,6 @@ class Website
     public function getName()
     {
         return $this->name;
-    }
-
-    public function getProductGroupId()
-    {
-        return $this->productGroupId;
     }
 
     public function getWebsiteId()
@@ -118,12 +108,6 @@ class Website
     public function setName(string $name)
     {
         $this->name = $name;
-        return $this;
-    }
-
-    public function setProductGroupId(int $productGroupId)
-    {
-        $this->productGroupId = $productGroupId;
         return $this;
     }
 

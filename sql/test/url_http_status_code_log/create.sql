@@ -6,4 +6,4 @@ CREATE TABLE `url_http_status_code_log` (
     PRIMARY KEY (`url_http_status_code_log_id`),
     INDEX (`url`),
     INDEX (`http_status_code`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

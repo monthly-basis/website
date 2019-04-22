@@ -9,4 +9,4 @@ CREATE TABLE `website` (
       `facebook_app_id` bigint unsigned DEFAULT NULL,
       PRIMARY KEY (`website_id`),
       UNIQUE KEY `domain` (`domain`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

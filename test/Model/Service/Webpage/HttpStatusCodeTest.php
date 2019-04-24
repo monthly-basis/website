@@ -23,6 +23,8 @@ class HttpStatusCodeTest extends TestCase
 
     public function testGetHttpStatusCode()
     {
+        $this->markTestSkipped('Skip getting HTTP status codes.');
+
         $webpageEntity = new WebsiteEntity\Webpage();
 
         $webpageEntity->setUrl('https://www.yahoo.com');

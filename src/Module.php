@@ -81,4 +81,9 @@ class Module
             ],
         ];
     }
+
+    public function onBootstrap()
+    {
+        include_once(__DIR__ . '/global-functions.php');
+    }
 }

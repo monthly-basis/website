@@ -3,6 +3,7 @@ CREATE TABLE `website` (
       `domain` varchar(255) NOT NULL,
       `name` varchar(255) NOT NULL,
       `description` varchar(255) NOT NULL,
+      `environment_id` tinyint(1) DEFAULT NULL,
       `google_analytics_tracking_id` varchar(16) DEFAULT NULL,
       `amazon_tracking_id` varchar(255) DEFAULT NULL,
       `facebook_app_id` bigint unsigned DEFAULT NULL,

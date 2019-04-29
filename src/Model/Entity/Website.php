@@ -23,6 +23,11 @@ class Website
     /**
      * @var int
      */
+    protected $environmentId;
+
+    /**
+     * @var int
+     */
     public $facebookAppId;
 
     /**
@@ -55,6 +60,11 @@ class Website
         return $this->domain;
     }
 
+    public function getEnvironmentId(): int
+    {
+        return $this->environmentId;
+    }
+
     public function getFacebookAppId() : int
     {
         return $this->facebookAppId;
@@ -84,6 +94,12 @@ class Website
     public function setDescription(string $description)
     {
         $this->description = $description;
+        return $this;
+    }
+
+    public function setEnvironmentId(int $environmentId): WebsiteEntity\Website
+    {
+        $this->environmentId = $environmentId;
         return $this;
     }
 

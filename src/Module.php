@@ -73,6 +73,12 @@ class Module
                         $serviceManager->get('main')
                     );
                 },
+                WebsiteTable\Website\EnvironmentId::class => function ($sm) {
+                    return new WebsiteTable\Website\EnvironmentId(
+                        $sm->get('main'),
+                        $sm->get(WebsiteTable\Website::class)
+                    );
+                },
                 WebsiteTable\Webpage::class => function ($serviceManager) {
                     return new WebsiteTable\Webpage(
                         $serviceManager->get('main')

@@ -12,6 +12,20 @@ class Website
         $this->adapter = $adapter;
     }
 
+    public function getSelect(): string
+    {
+        return '
+            SELECT `website`.`website_id`
+                 , `website`.`domain`
+                 , `website`.`name`
+                 , `website`.`description`
+                 , `website`.`environment_id`
+                 , `website`.`google_analytics_tracking_id`
+                 , `website`.`amazon_tracking_id`
+                 , `website`.`facebook_app_id`
+        ';
+    }
+
     /**
      * @return int Primary key
      */

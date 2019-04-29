@@ -33,6 +33,12 @@ class Website
             // Do nothing.
         }
 
+        if (isset($array['environment_id'])) {
+            $websiteEntity->setEnvironmentId(
+                (int) $array['environment_id']
+            );
+        }
+
         if (isset($array['amazon_tracking_id'])) {
             $websiteEntity->setAmazonTrackingId(
                 $array['amazon_tracking_id']

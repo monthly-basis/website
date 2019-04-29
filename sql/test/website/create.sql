@@ -8,5 +8,6 @@ CREATE TABLE `website` (
       `amazon_tracking_id` varchar(255) DEFAULT NULL,
       `facebook_app_id` bigint unsigned DEFAULT NULL,
       PRIMARY KEY (`website_id`),
-      UNIQUE KEY `domain` (`domain`)
+      UNIQUE KEY `domain` (`domain`),
+      INDEX `environment_id` (`environment_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

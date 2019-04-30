@@ -1,10 +1,10 @@
 <?php
 namespace LeoGalleguillos\WebsiteTest\Model\Table;
 
-use ArrayObject;
 use Exception;
 use LeoGalleguillos\Website\Model\Table as WebsiteTable;
 use LeoGalleguillos\WebsiteTest\TableTestCase;
+use TypeError;
 use Zend\Db\Adapter\Adapter;
 use PHPUnit\Framework\TestCase;
 
@@ -66,10 +66,10 @@ class WebsiteTest extends TableTestCase
         try {
             $this->websiteTable->selectWhereDomain('www.example.com');
             $this->fail();
-        } catch (Exception $exception) {
+        } catch (TypeError $typeError) {
             $this->assertSame(
-                'Matching row not found.',
-                $exception->getMessage()
+                'Return value of',
+                substr($typeError->getMessage(), 0, 15)
             );
         }
     }

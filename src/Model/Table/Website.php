@@ -1,8 +1,6 @@
 <?php
 namespace LeoGalleguillos\Website\Model\Table;
 
-use ArrayObject;
-use Exception;
 use Zend\Db\Adapter\Adapter;
 
 class Website
@@ -26,19 +24,22 @@ class Website
         ';
     }
 
-    /**
-     * @return int Primary key
-     */
     public function insert(
         string $domain,
         string $name,
         string $description,
         string $googleAnalyticsTrackingId = null,
         string $amazonTrackingId = null
-    ) {
+    ): int {
         $sql = '
             INSERT
-              INTO `website` (`domain`, `name`, `description`, `google_analytics_tracking_id`, `amazon_tracking_id`)
+              INTO `website` (
+                       `domain`
+                     , `name`
+                     , `description`
+                     , `google_analytics_tracking_id`
+                     , `amazon_tracking_id`
+                   )
             VALUES (?, ?, ?, ?, ?)
                  ;
         ';
@@ -50,25 +51,28 @@ class Website
             $amazonTrackingId,
         ];
         return $this->adapter
-                    ->query($sql, $parameters)
-                    ->getGeneratedValue();
+            ->query($sql)
+            ->execute($parameters)
+            ->getGeneratedValue();
     }
 
-    public function selectCount()
+    public function selectCount(): int
     {
         $sql = '
             SELECT COUNT(*) AS `count`
               FROM `website`
                  ;
         ';
-        $row = $this->adapter->query($sql)->execute()->current();
-        return (int) $row['count'];
+        return (int) $this->adapter
+            ->query($sql)
+            ->execute()
+            ->current()['count'];
     }
 
     /**
-     * @return ArrayObject
+     * @throws TypeError
      */
-    public function selectWhereWebsiteId(int $websiteId) : ArrayObject
+    public function selectWhereWebsiteId(int $websiteId): array
     {
         $sql = '
             SELECT `website`.`website_id`
@@ -82,15 +86,16 @@ class Website
              WHERE `website`.`website_id` = ?
                  ;
         ';
-        $result = $this->adapter->query($sql, [$websiteId])->current();
-
-        return $result;
+        $parameters = [
+            $domain,
+        ];
+        return $this->adapter->query($sql)->execute($parameters)->current();
     }
 
     /**
-     * @return array
+     * @throws TypeError
      */
-    public function selectWhereDomain(string $domain) : array
+    public function selectWhereDomain(string $domain): array
     {
         $sql = '
             SELECT `website`.`website_id`
@@ -104,12 +109,9 @@ class Website
              WHERE `website`.`domain` = ?
                  ;
         ';
-        $result = $this->adapter->query($sql)->execute([$domain])->current();
-
-        if (empty($result)) {
-            throw new Exception('Matching row not found.');
-        }
-
-        return $result;
+        $parameters = [
+            $domain,
+        ];
+        return $this->adapter->query($sql)->execute($parameters)->current();
     }
 }

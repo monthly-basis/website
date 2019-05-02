@@ -14,12 +14,18 @@ class Module
         return [
             'view_helpers' => [
                 'aliases' => [
+                    'getWebsiteFromConfig' => WebsiteHelper\Website\FromConfig::class,
                     'getWebsiteInstance' => WebsiteHelper\GetInstance::class,
                 ],
                 'factories' => [
                     WebsiteHelper\GetInstance::class => function ($serviceManager) {
                         return new WebsiteHelper\GetInstance(
                             $serviceManager->get(WebsiteService\Website::class)
+                        );
+                    },
+                    WebsiteHelper\Website\FromConfig::class => function ($sm) {
+                        return new WebsiteHelper\Website\FromConfig(
+                            $sm->get(WebsiteService\Website\FromConfig::class)
                         );
                     },
                 ],
@@ -61,6 +67,12 @@ class Module
                 WebsiteService\Website::class => function ($serviceManager) {
                     return new WebsiteService\Website(
                         $serviceManager->get(WebsiteFactory\Website::class)
+                    );
+                },
+                WebsiteService\Website\FromConfig::class => function ($sm) {
+                    return new WebsiteService\Website\FromConfig(
+                        $sm->get('Config')['website'],
+                        $sm->get(WebsiteFactory\Website::class)
                     );
                 },
                 WebsiteTable\UrlHttpStatusCodeLog::class => function ($serviceManager) {

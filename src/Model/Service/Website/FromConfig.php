@@ -21,7 +21,7 @@ class FromConfig
 
     public function getWebsite(): WebsiteEntity\Website
     {
-        if ($this->cache['websiteEntity']) {
+        if (isset($this->cache['websiteEntity'])) {
             return $this->cache['websiteEntity'];
         }
 

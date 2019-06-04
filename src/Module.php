@@ -47,6 +47,9 @@ class Module
                         $serviceManager->get(WebsiteTable\Website::class)
                     );
                 },
+                WebsiteService\ShowAds::class => function ($serviceManager) {
+                    return new WebsiteService\ShowAds();
+                },
                 WebsiteService\Webpage\Html::class => function ($serviceManager) {
                     return new WebsiteService\Webpage\Html(
                     );

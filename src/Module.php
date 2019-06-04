@@ -18,9 +18,9 @@ class Module
                     'getWebsiteInstance' => WebsiteHelper\GetInstance::class,
                 ],
                 'factories' => [
-                    WebsiteHelper\GetInstance::class => function ($serviceManager) {
+                    WebsiteHelper\GetInstance::class => function ($sm) {
                         return new WebsiteHelper\GetInstance(
-                            $serviceManager->get(WebsiteService\Website::class)
+                            $sm->get(WebsiteService\Website::class)
                         );
                     },
                     WebsiteHelper\Website\FromConfig::class => function ($sm) {
@@ -37,17 +37,17 @@ class Module
     {
         return [
             'factories' => [
-                WebsiteFactory\Website::class => function ($serviceManager) {
+                WebsiteFactory\Website::class => function ($sm) {
                     return new WebsiteFactory\Website(
-                        $serviceManager->get(WebsiteTable\Website::class)
+                        $sm->get(WebsiteTable\Website::class)
                     );
                 },
-                WebsiteService\ShowAds::class => function ($serviceManager) {
+                WebsiteService\ShowAds::class => function ($sm) {
                     return new WebsiteService\ShowAds();
                 },
-                WebsiteService\Website::class => function ($serviceManager) {
+                WebsiteService\Website::class => function ($sm) {
                     return new WebsiteService\Website(
-                        $serviceManager->get(WebsiteFactory\Website::class)
+                        $sm->get(WebsiteFactory\Website::class)
                     );
                 },
                 WebsiteService\Website\FromConfig::class => function ($sm) {
@@ -56,9 +56,9 @@ class Module
                         $sm->get(WebsiteFactory\Website::class)
                     );
                 },
-                WebsiteTable\Website::class => function ($serviceManager) {
+                WebsiteTable\Website::class => function ($sm) {
                     return new WebsiteTable\Website(
-                        $serviceManager->get('main')
+                        $sm->get('main')
                     );
                 },
                 WebsiteTable\Website\EnvironmentId::class => function ($sm) {

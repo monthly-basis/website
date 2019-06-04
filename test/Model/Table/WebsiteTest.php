@@ -1,48 +1,23 @@
 <?php
 namespace LeoGalleguillos\WebsiteTest\Model\Table;
 
-use Exception;
 use LeoGalleguillos\Website\Model\Table as WebsiteTable;
-use LeoGalleguillos\WebsiteTest\TableTestCase;
+use LeoGalleguillos\Test\TableTestCase;
 use TypeError;
 use Zend\Db\Adapter\Adapter;
-use PHPUnit\Framework\TestCase;
 
 class WebsiteTest extends TableTestCase
 {
-    /**
-     * @var string
-     */
-    protected $sqlPath = __DIR__ . '/../../..' . '/sql/leogalle_test/website/';
-
     protected function setUp()
     {
-        $configArray     = require(__DIR__ . '/../../../config/autoload/local.php');
-        $configArray     = $configArray['db']['adapters']['leogalle_test'];
-        $this->adapter         = new Adapter($configArray);
-        $this->websiteTable = new WebsiteTable\Website($this->adapter);
+        $this->websiteTable = new WebsiteTable\Website(
+            $this->getAdapter()
+        );
 
         $this->setForeignKeyChecks0();
-        $this->dropTable();
-        $this->createTable();
+        $this->dropTable('website');
+        $this->createTable('website');
         $this->setForeignKeyChecks1();
-    }
-
-    protected function dropTable()
-    {
-        $sql = file_get_contents($this->sqlPath . 'drop.sql');
-        $result = $this->adapter->query($sql)->execute();
-    }
-
-    protected function createTable()
-    {
-        $sql = file_get_contents($this->sqlPath . 'create.sql');
-        $result = $this->adapter->query($sql)->execute();
-    }
-
-    public function testInitialize()
-    {
-        $this->assertInstanceOf(WebsiteTable\Website::class, $this->websiteTable);
     }
 
     public function testInsert()

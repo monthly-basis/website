@@ -58,12 +58,12 @@ class Module
                 },
                 WebsiteTable\Website::class => function ($sm) {
                     return new WebsiteTable\Website(
-                        $sm->get('main')
+                        $sm->get('website')
                     );
                 },
                 WebsiteTable\Website\EnvironmentId::class => function ($sm) {
                     return new WebsiteTable\Website\EnvironmentId(
-                        $sm->get('main'),
+                        $sm->get('website'),
                         $sm->get(WebsiteTable\Website::class)
                     );
                 },

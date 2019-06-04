@@ -37,11 +37,6 @@ class Module
     {
         return [
             'factories' => [
-                WebsiteFactory\Webpage::class => function ($serviceManager) {
-                    return new WebsiteFactory\Webpage(
-                        $serviceManager->get(WebsiteTable\Webpage::class)
-                    );
-                },
                 WebsiteFactory\Website::class => function ($serviceManager) {
                     return new WebsiteFactory\Website(
                         $serviceManager->get(WebsiteTable\Website::class)
@@ -49,23 +44,6 @@ class Module
                 },
                 WebsiteService\ShowAds::class => function ($serviceManager) {
                     return new WebsiteService\ShowAds();
-                },
-                WebsiteService\Webpage\Html::class => function ($serviceManager) {
-                    return new WebsiteService\Webpage\Html(
-                    );
-                },
-                WebsiteService\Webpage\HttpStatusCode::class => function ($serviceManager) {
-                    return new WebsiteService\Webpage\HttpStatusCode();
-                },
-                WebsiteService\Webpage\Slug::class => function ($serviceManager) {
-                    return new WebsiteService\Webpage\Slug(
-                        $serviceManager->get(StringService\UrlFriendly::class)
-                    );
-                },
-                WebsiteService\Webpage\Url\WasCurledRecently::class => function ($serviceManager) {
-                    return new WebsiteService\Webpage\Url\WasCurledRecently(
-                        $serviceManager->get(WebsiteTable\UrlHttpStatusCodeLog::class)
-                    );
                 },
                 WebsiteService\Website::class => function ($serviceManager) {
                     return new WebsiteService\Website(
@@ -78,11 +56,6 @@ class Module
                         $sm->get(WebsiteFactory\Website::class)
                     );
                 },
-                WebsiteTable\UrlHttpStatusCodeLog::class => function ($serviceManager) {
-                    return new WebsiteTable\UrlHttpStatusCodeLog(
-                        $serviceManager->get('main')
-                    );
-                },
                 WebsiteTable\Website::class => function ($serviceManager) {
                     return new WebsiteTable\Website(
                         $serviceManager->get('main')
@@ -92,11 +65,6 @@ class Module
                     return new WebsiteTable\Website\EnvironmentId(
                         $sm->get('main'),
                         $sm->get(WebsiteTable\Website::class)
-                    );
-                },
-                WebsiteTable\Webpage::class => function ($serviceManager) {
-                    return new WebsiteTable\Webpage(
-                        $serviceManager->get('main')
                     );
                 },
             ],

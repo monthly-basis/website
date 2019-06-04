@@ -8,7 +8,6 @@
     "license": "MIT",
     "name": "leo-galleguillos/website",
     "require": {
-        "leo-galleguillos/html": "dev-master",
         "leo-galleguillos/string": "dev-master",
         "leo-galleguillos/test": "dev-master",
         "zendframework/zend-test": "^3.1",

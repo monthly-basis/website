@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bea3e7f2fa8b70880303438e6f162c10",
+    "content-hash": "0d6e7d22c7799f6b813201a6edb51bb9",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -90,36 +90,6 @@
                 "instantiate"
             ],
             "time": "2015-06-14T21:17:01+00:00"
-        },
-        {
-            "name": "leo-galleguillos/html",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/LeoGalleguillos/Html.git",
-                "reference": "8ef369465b2d502a1952040bf7c19f15873f57b7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/LeoGalleguillos/Html/zipball/8ef369465b2d502a1952040bf7c19f15873f57b7",
-                "reference": "8ef369465b2d502a1952040bf7c19f15873f57b7",
-                "shasum": ""
-            },
-            "require": {
-                "zendframework/zend-test": "^3.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "LeoGalleguillos\\Html\\": "src/",
-                    "LeoGalleguillos\\HtmlTest\\": "test/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "time": "2018-01-23T14:26:43+00:00"
         },
         {
             "name": "leo-galleguillos/string",
@@ -2750,7 +2720,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "leo-galleguillos/html": 20,
         "leo-galleguillos/string": 20,
         "leo-galleguillos/test": 20
     },

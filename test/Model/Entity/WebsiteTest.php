@@ -57,6 +57,16 @@ class WebsiteTest extends TestCase
             $this->websiteEntity->getGoogleAnalyticsTrackingId()
         );
 
+        $language = 'es';
+        $this->assertSame(
+            $this->websiteEntity,
+            $this->websiteEntity->setLanguage($language)
+        );
+        $this->assertSame(
+            $language,
+            $this->websiteEntity->getLanguage()
+        );
+
         $value = 'name';
         $this->assertSame(
             $this->websiteEntity,

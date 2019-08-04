@@ -38,6 +38,11 @@ class Website
     /**
      * @var string
      */
+    protected $language;
+
+    /**
+     * @var string
+     */
     public $name;
 
     /**
@@ -73,6 +78,11 @@ class Website
     public function getGoogleAnalyticsTrackingId() : string
     {
         return $this->googleAnalyticsTrackingId;
+    }
+
+    public function getLanguage(): string
+    {
+        return $this->language;
     }
 
     public function getName()
@@ -118,6 +128,12 @@ class Website
     public function setGoogleAnalyticsTrackingId(string $googleAnalyticsTrackingId)
     {
         $this->googleAnalyticsTrackingId = $googleAnalyticsTrackingId;
+        return $this;
+    }
+
+    public function setLanguage(string $language): WebsiteEntity\Website
+    {
+        $this->language = $language;
         return $this;
     }
 

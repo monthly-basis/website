@@ -11,22 +11,6 @@ class Website
      */
     protected $websiteEntity;
 
-    public function __construct(
-        WebsiteFactory\Website $websiteFactory
-    ) {
-        $this->websiteFactory = $websiteFactory;
-    }
-
-    public function getInstance() : WebsiteEntity\Website
-    {
-        if ($this->websiteEntity) {
-            return $this->websiteEntity;
-        }
-
-        $this->websiteEntity = $this->websiteFactory->buildFromDomain();
-        return $this->websiteEntity;
-    }
-
     public function getWebsite(): WebsiteEntity\Website
     {
         return $this->websiteEntity;

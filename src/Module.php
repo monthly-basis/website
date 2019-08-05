@@ -21,7 +21,7 @@ class Module
                 'factories' => [
                     WebsiteHelper\GetInstance::class => function ($sm) {
                         return new WebsiteHelper\GetInstance(
-                            $sm->get(WebsiteService\Website::class)
+                            $sm->get(WebsiteService\FromDomain::class)
                         );
                     },
                     WebsiteHelper\ShowAdsService::class => function ($sm) {
@@ -48,13 +48,16 @@ class Module
                         $sm->get(WebsiteTable\Website::class)
                     );
                 },
+                WebsiteService\FromDomain::class => function ($sm) {
+                    return new WebsiteService\FromDomain(
+                        $sm->get(WebsiteFactory\Website::class)
+                    );
+                },
                 WebsiteService\ShowAds::class => function ($sm) {
                     return new WebsiteService\ShowAds();
                 },
                 WebsiteService\Website::class => function ($sm) {
-                    return new WebsiteService\Website(
-                        $sm->get(WebsiteFactory\Website::class)
-                    );
+                    return new WebsiteService\Website();
                 },
                 WebsiteService\Website\FromConfig::class => function ($sm) {
                     return new WebsiteService\Website\FromConfig(

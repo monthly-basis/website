@@ -7,13 +7,13 @@ use LeoGalleguillos\Website\Model\Service as WebsiteService;
 class GetInstance
 {
     public function __construct(
-        WebsiteService\Website $websiteService
+        WebsiteService\FromDomain $fromDomainService
     ) {
-        $this->websiteService = $websiteService;
+        $this->fromDomainService = $fromDomainService;
     }
 
-    public function __invoke() : WebsiteEntity\Website
+    public function __invoke(): WebsiteEntity\Website
     {
-        return $this->websiteService->getInstance();
+        return $this->fromDomainService->getWebsite();
     }
 }

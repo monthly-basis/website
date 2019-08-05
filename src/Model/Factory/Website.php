@@ -18,8 +18,7 @@ class Website
         array $array
     ) : WebsiteEntity\Website {
         $websiteEntity = $this->buildInstance()
-            ->setName($array['name'])
-            ->setWebsiteId($array['website_id']);
+            ->setName($array['name']);
 
         try {
             $websiteEntity->setDescription($array['description']);
@@ -54,6 +53,18 @@ class Website
         if (isset($array['facebook_app_id'])) {
             $websiteEntity->setFacebookAppId(
                 $array['facebook_app_id']
+            );
+        }
+
+        if (isset($array['language'])) {
+            $websiteEntity->setLanguage(
+                $array['language']
+            );
+        }
+
+        if (isset($array['website_id'])) {
+            $websiteEntity->setWebsiteId(
+                $array['website_id']
             );
         }
 

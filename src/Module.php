@@ -43,6 +43,9 @@ class Module
     {
         return [
             'factories' => [
+                WebsiteFactory\FromArray::class => function ($sm) {
+                    return new WebsiteFactory\FromArray();
+                },
                 WebsiteFactory\Website::class => function ($sm) {
                     return new WebsiteFactory\Website(
                         $sm->get(WebsiteTable\Website::class)

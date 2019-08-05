@@ -14,16 +14,18 @@ class FromArray
 
         $websiteEntity->setName($array['name']);
 
-        try {
-            $websiteEntity->setDescription($array['description']);
-        } catch (TypeError $typeError) {
-            // Do nothing.
+        if (isset($array['amazon_tracking_id'])) {
+            $websiteEntity->setAmazonTrackingId(
+                $array['amazon_tracking_id']
+            );
         }
 
-        try {
+        if (isset($array['description'])) {
+            $websiteEntity->setDescription($array['description']);
+        }
+
+        if (isset($array['domain'])) {
             $websiteEntity->setDomain($array['domain']);
-        } catch (TypeError $typeError) {
-            // Do nothing.
         }
 
         if (isset($array['environment_id'])) {
@@ -32,21 +34,15 @@ class FromArray
             );
         }
 
-        if (isset($array['amazon_tracking_id'])) {
-            $websiteEntity->setAmazonTrackingId(
-                $array['amazon_tracking_id']
+        if (isset($array['facebook_app_id'])) {
+            $websiteEntity->setFacebookAppId(
+                $array['facebook_app_id']
             );
         }
 
         if (isset($array['google_analytics_tracking_id'])) {
             $websiteEntity->setGoogleAnalyticsTrackingId(
                 $array['google_analytics_tracking_id']
-            );
-        }
-
-        if (isset($array['facebook_app_id'])) {
-            $websiteEntity->setFacebookAppId(
-                $array['facebook_app_id']
             );
         }
 

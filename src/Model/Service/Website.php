@@ -17,11 +17,6 @@ class Website
         $this->websiteFactory = $websiteFactory;
     }
 
-    /**
-     * Get instance.
-     *
-     * @return WebsiteEntity\Website
-     */
     public function getInstance() : WebsiteEntity\Website
     {
         if ($this->websiteEntity) {
@@ -30,5 +25,17 @@ class Website
 
         $this->websiteEntity = $this->websiteFactory->buildFromDomain();
         return $this->websiteEntity;
+    }
+
+    public function getWebsite(): WebsiteEntity\Website
+    {
+        return $this->websiteEntity;
+    }
+
+    public function setWebsite(
+        WebsiteEntity\Website $websiteEntity
+    ): WebsiteService\Website {
+        $this->websiteEntity = $websiteEntity;
+        return $this;
     }
 }

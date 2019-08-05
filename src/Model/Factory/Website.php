@@ -14,6 +14,9 @@ class Website
         $this->websiteTable = $websiteTable;
     }
 
+    /**
+     * @deprecated Use WebsiteFactory\FromArray::buildFromArray instead
+     */
     public function buildFromArray(
         array $array
     ) : WebsiteEntity\Website {

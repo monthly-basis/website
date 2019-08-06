@@ -12,8 +12,6 @@ class FromArray
     ) : WebsiteEntity\Website {
         $websiteEntity = new WebsiteEntity\Website();
 
-        $websiteEntity->setName($array['name']);
-
         if (isset($array['amazon_tracking_id'])) {
             $websiteEntity->setAmazonTrackingId(
                 $array['amazon_tracking_id']
@@ -50,6 +48,10 @@ class FromArray
             $websiteEntity->setLanguage(
                 $array['language']
             );
+        }
+
+        if (isset($array['name'])) {
+            $websiteEntity->setName($array['name']);
         }
 
         if (isset($array['website_id'])) {

@@ -2,7 +2,7 @@
 namespace LeoGalleguillos\Website\Model\Service;
 
 use LeoGalleguillos\Website\Model\Entity as WebsiteEntity;
-use LeoGalleguillos\Website\Model\Factory as WebsiteFactory;
+use LeoGalleguillos\Website\Model\Service as WebsiteService;
 
 class Website
 {

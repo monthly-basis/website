@@ -15,6 +15,7 @@ class Module
             'view_helpers' => [
                 'aliases' => [
                     'getShowAdsService' => WebsiteHelper\ShowAdsService::class,
+                    'getWebsite' => WebsiteHelper\Website::class,
                     'getWebsiteFromConfig' => WebsiteHelper\Website\FromConfig::class,
                     'getWebsiteInstance' => WebsiteHelper\GetInstance::class,
                 ],
@@ -27,6 +28,11 @@ class Module
                     WebsiteHelper\ShowAdsService::class => function ($sm) {
                         return new WebsiteHelper\ShowAdsService(
                             $sm->get(WebsiteService\ShowAds::class)
+                        );
+                    },
+                    WebsiteHelper\Website::class => function ($sm) {
+                        return new WebsiteHelper\Website(
+                            $sm->get(WebsiteService\Website::class)
                         );
                     },
                     WebsiteHelper\Website\FromConfig::class => function ($sm) {

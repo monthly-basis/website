@@ -215,16 +215,16 @@
         },
         {
             "name": "laminas/laminas-db",
-            "version": "2.11.1",
+            "version": "2.11.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-db.git",
-                "reference": "8ed705724d1b03d9a7ab59dc110a43ed1781c7e4"
+                "reference": "76f9527da996c2fef32ef1f3a939e18ca5e9d962"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-db/zipball/8ed705724d1b03d9a7ab59dc110a43ed1781c7e4",
-                "reference": "8ed705724d1b03d9a7ab59dc110a43ed1781c7e4",
+                "url": "https://api.github.com/repos/laminas/laminas-db/zipball/76f9527da996c2fef32ef1f3a939e18ca5e9d962",
+                "reference": "76f9527da996c2fef32ef1f3a939e18ca5e9d962",
                 "shasum": ""
             },
             "require": {
@@ -273,7 +273,7 @@
                 "db",
                 "laminas"
             ],
-            "time": "2020-01-10T22:07:11+00:00"
+            "time": "2020-01-14T13:07:26+00:00"
         },
         {
             "name": "laminas/laminas-dom",
@@ -1270,16 +1270,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LeoGalleguillos/String.git",
-                "reference": "cf540a5d82e1593c728ace14f4f7f5a4b4b81846"
+                "reference": "cd4d14a2571d1778a8d7a4bb39b75675b1570bcb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LeoGalleguillos/String/zipball/cf540a5d82e1593c728ace14f4f7f5a4b4b81846",
-                "reference": "cf540a5d82e1593c728ace14f4f7f5a4b4b81846",
+                "url": "https://api.github.com/repos/LeoGalleguillos/String/zipball/cd4d14a2571d1778a8d7a4bb39b75675b1570bcb",
+                "reference": "cd4d14a2571d1778a8d7a4bb39b75675b1570bcb",
                 "shasum": ""
             },
             "require": {
-                "zendframework/zend-test": "^3.1"
+                "laminas/laminas-test": "^3.1"
             },
             "type": "library",
             "autoload": {
@@ -1292,7 +1292,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2019-12-06T08:01:13+00:00"
+            "time": "2020-01-25T09:17:34+00:00"
         },
         {
             "name": "leo-galleguillos/test",
@@ -1300,12 +1300,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LeoGalleguillos/Test.git",
-                "reference": "4bc9e130a1c03b72f93329e75ff4bf519f03a4c4"
+                "reference": "34e71d6fd5e13c7bfae0632a9599ae0534ce0b94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LeoGalleguillos/Test/zipball/4bc9e130a1c03b72f93329e75ff4bf519f03a4c4",
-                "reference": "4bc9e130a1c03b72f93329e75ff4bf519f03a4c4",
+                "url": "https://api.github.com/repos/LeoGalleguillos/Test/zipball/34e71d6fd5e13c7bfae0632a9599ae0534ce0b94",
+                "reference": "34e71d6fd5e13c7bfae0632a9599ae0534ce0b94",
                 "shasum": ""
             },
             "require": {
@@ -1323,7 +1323,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2020-01-13T07:41:45+00:00"
+            "time": "2020-01-26T07:24:54+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -1625,24 +1625,24 @@
         },
         {
             "name": "phpspec/prophecy",
-            "version": "1.10.1",
+            "version": "v1.10.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "cbe1df668b3fe136bcc909126a0f529a78d4cbbc"
+                "reference": "b4400efc9d206e83138e2bb97ed7f5b14b831cd9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/cbe1df668b3fe136bcc909126a0f529a78d4cbbc",
-                "reference": "cbe1df668b3fe136bcc909126a0f529a78d4cbbc",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/b4400efc9d206e83138e2bb97ed7f5b14b831cd9",
+                "reference": "b4400efc9d206e83138e2bb97ed7f5b14b831cd9",
                 "shasum": ""
             },
             "require": {
                 "doctrine/instantiator": "^1.0.2",
                 "php": "^5.3|^7.0",
                 "phpdocumentor/reflection-docblock": "^2.0|^3.0.2|^4.0|^5.0",
-                "sebastian/comparator": "^1.2.3|^2.0|^3.0",
-                "sebastian/recursion-context": "^1.0|^2.0|^3.0"
+                "sebastian/comparator": "^1.2.3|^2.0|^3.0|^4.0",
+                "sebastian/recursion-context": "^1.0|^2.0|^3.0|^4.0"
             },
             "require-dev": {
                 "phpspec/phpspec": "^2.5 || ^3.2",
@@ -1684,7 +1684,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2019-12-22T21:05:45+00:00"
+            "time": "2020-01-20T15:57:02+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",

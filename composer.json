@@ -8,9 +8,9 @@
     "license": "MIT",
     "name": "leo-galleguillos/website",
     "require": {
-        "leo-galleguillos/string": "dev-master",
-        "leo-galleguillos/test": "dev-master",
+        "laminas/laminas-db": "^2.9",
         "laminas/laminas-test": "^3.1",
-        "laminas/laminas-db": "^2.9"
+        "leo-galleguillos/string": "^1.0",
+        "leo-galleguillos/test": "^1.0"
     }
 }

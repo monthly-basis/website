@@ -97,6 +97,6 @@ class Module
 
     public function onBootstrap()
     {
-        include_once(__DIR__ . '/global-functions.php');
+        require_once(__DIR__ . '/GlobalFunction/var_dump_pre.php');
     }
 }

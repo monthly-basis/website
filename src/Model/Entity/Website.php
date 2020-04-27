@@ -36,6 +36,11 @@ class Website
     public $googleAnalyticsTrackingId;
 
     /**
+     * @var array
+     */
+    protected $metadata;
+
+    /**
      * @var string
      */
     protected $language;
@@ -83,6 +88,11 @@ class Website
     public function getLanguage(): string
     {
         return $this->language;
+    }
+
+    public function getMetadata(): array
+    {
+        return $this->metadata;
     }
 
     public function getName()
@@ -134,6 +144,12 @@ class Website
     public function setLanguage(string $language): WebsiteEntity\Website
     {
         $this->language = $language;
+        return $this;
+    }
+
+    public function setMetadata(array $metadata): WebsiteEntity\Website
+    {
+        $this->metadata = $metadata;
         return $this;
     }
 

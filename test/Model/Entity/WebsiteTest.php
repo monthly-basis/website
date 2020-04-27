@@ -25,7 +25,7 @@ class WebsiteTest extends TestCase
         $this->assertObjectHasAttribute('websiteId', $this->websiteEntity);
     }
 
-    public function testGetAndSetMethods()
+    public function test_getAndSetMethods()
     {
         $value = 'description';
         $this->assertSame(
@@ -65,6 +65,18 @@ class WebsiteTest extends TestCase
         $this->assertSame(
             $language,
             $this->websiteEntity->getLanguage()
+        );
+
+        $metadata = [
+            'database' => 'custom_database_name',
+        ];
+        $this->assertSame(
+            $this->websiteEntity,
+            $this->websiteEntity->setMetadata($metadata)
+        );
+        $this->assertSame(
+            $metadata,
+            $this->websiteEntity->getMetadata()
         );
 
         $value = 'name';

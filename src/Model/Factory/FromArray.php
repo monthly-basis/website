@@ -50,6 +50,12 @@ class FromArray
             );
         }
 
+        if (isset($array['metadata'])) {
+            $websiteEntity->setMetadata(
+                $array['metadata']
+            );
+        }
+
         if (isset($array['name'])) {
             $websiteEntity->setName($array['name']);
         }

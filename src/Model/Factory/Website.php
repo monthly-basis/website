@@ -23,10 +23,8 @@ class Website
         $websiteEntity = $this->buildInstance()
             ->setName($array['name']);
 
-        try {
+        if (isset($array['description'])) {
             $websiteEntity->setDescription($array['description']);
-        } catch (TypeError $typeError) {
-            // Do nothing.
         }
 
         try {

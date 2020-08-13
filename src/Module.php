@@ -1,7 +1,6 @@
 <?php
 namespace LeoGalleguillos\Website;
 
-use LeoGalleguillos\String\Model\Service as StringService;
 use LeoGalleguillos\Website\Model\Factory as WebsiteFactory;
 use LeoGalleguillos\Website\Model\Service as WebsiteService;
 use LeoGalleguillos\Website\Model\Table as WebsiteTable;

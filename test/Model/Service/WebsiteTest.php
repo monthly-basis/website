@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 class WebsiteTest extends TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->websiteFactoryMock = $this->createMock(
             WebsiteFactory\Website::class

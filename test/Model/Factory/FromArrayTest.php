@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 
 class FromArrayTest extends TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->fromArrayFactory = new WebsiteFactory\FromArray();
     }

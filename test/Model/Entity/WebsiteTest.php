@@ -6,7 +6,7 @@ use PHPUnit\Framework\TestCase;
 
 class WebsiteTest extends TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->websiteEntity = new WebsiteEntity\Website();
     }

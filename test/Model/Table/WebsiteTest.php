@@ -8,7 +8,7 @@ use Zend\Db\Adapter\Adapter;
 
 class WebsiteTest extends TableTestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->websiteTable = new WebsiteTable\Website(
             $this->getAdapter()

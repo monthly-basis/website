@@ -10,7 +10,7 @@ use ReflectionClass;
 
 class WebsiteTest extends TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->websiteTableMock = $this->createMock(
             WebsiteTable\Website::class

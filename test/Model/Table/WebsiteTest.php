@@ -2,7 +2,7 @@
 namespace LeoGalleguillos\WebsiteTest\Model\Table;
 
 use LeoGalleguillos\Website\Model\Table as WebsiteTable;
-use LeoGalleguillos\Test\TableTestCase;
+use MonthlyBasis\LaminasTest\TableTestCase;
 use TypeError;
 use Zend\Db\Adapter\Adapter;
 

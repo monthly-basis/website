@@ -1,5 +1,5 @@
 <?php
-namespace LeoGalleguillos\Website\Model\Service;
+namespace MonthlyBasis\Website\Model\Service;
 
 class ShowAds
 {

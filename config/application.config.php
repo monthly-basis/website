@@ -2,7 +2,7 @@
 
 return [
     'modules' => [
-        'LeoGalleguillos\Website',
+        'MonthlyBasis\Website',
         'Zend\Db',
         'Zend\Router',
     ],

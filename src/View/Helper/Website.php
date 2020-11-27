@@ -1,8 +1,8 @@
 <?php
-namespace LeoGalleguillos\Website\View\Helper;
+namespace MonthlyBasis\Website\View\Helper;
 
-use LeoGalleguillos\Website\Model\Entity as WebsiteEntity;
-use LeoGalleguillos\Website\Model\Service as WebsiteService;
+use MonthlyBasis\Website\Model\Entity as WebsiteEntity;
+use MonthlyBasis\Website\Model\Service as WebsiteService;
 use Zend\View\Helper\AbstractHelper;
 
 class Website extends AbstractHelper

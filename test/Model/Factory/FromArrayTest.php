@@ -1,8 +1,8 @@
 <?php
-namespace LeoGalleguillos\WebsiteTest\Model\Factory;
+namespace MonthlyBasis\WebsiteTest\Model\Factory;
 
-use LeoGalleguillos\Website\Model\Entity as WebsiteEntity;
-use LeoGalleguillos\Website\Model\Factory as WebsiteFactory;
+use MonthlyBasis\Website\Model\Entity as WebsiteEntity;
+use MonthlyBasis\Website\Model\Factory as WebsiteFactory;
 use PHPUnit\Framework\TestCase;
 
 class FromArrayTest extends TestCase

@@ -1,8 +1,8 @@
 <?php
-namespace LeoGalleguillos\Website\Model\Service;
+namespace MonthlyBasis\Website\Model\Service;
 
-use LeoGalleguillos\Website\Model\Entity as WebsiteEntity;
-use LeoGalleguillos\Website\Model\Factory as WebsiteFactory;
+use MonthlyBasis\Website\Model\Entity as WebsiteEntity;
+use MonthlyBasis\Website\Model\Factory as WebsiteFactory;
 
 class FromDomain
 {

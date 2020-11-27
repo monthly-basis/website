@@ -1,8 +1,8 @@
 <?php
-namespace LeoGalleguillos\Website\Model\Table\Website;
+namespace MonthlyBasis\Website\Model\Table\Website;
 
 use Generator;
-use LeoGalleguillos\Website\Model\Table as WebsiteTable;
+use MonthlyBasis\Website\Model\Table as WebsiteTable;
 use Zend\Db\Adapter\Adapter;
 
 class EnvironmentId

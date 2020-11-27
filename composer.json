@@ -1,12 +1,12 @@
 {
     "autoload": {
         "psr-4": {
-            "LeoGalleguillos\\Website\\": "src/",
-            "LeoGalleguillos\\WebsiteTest\\": "test/"
+            "MonthlyBasis\\Website\\": "src/",
+            "MonthlyBasis\\WebsiteTest\\": "test/"
         }
     },
     "license": "MIT",
-    "name": "leo-galleguillos/website",
+    "name": "monthly-basis/website",
     "require": {
         "laminas/laminas-db": "^2.9",
         "laminas/laminas-test": "^3.1",

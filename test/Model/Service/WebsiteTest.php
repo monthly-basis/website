@@ -1,9 +1,9 @@
 <?php
-namespace LeoGalleguillos\WebsiteTest\Model\Service;
+namespace MonthlyBasis\WebsiteTest\Model\Service;
 
-use LeoGalleguillos\Website\Model\Entity as WebsiteEntity;
-use LeoGalleguillos\Website\Model\Factory as WebsiteFactory;
-use LeoGalleguillos\Website\Model\Service as WebsiteService;
+use MonthlyBasis\Website\Model\Entity as WebsiteEntity;
+use MonthlyBasis\Website\Model\Factory as WebsiteFactory;
+use MonthlyBasis\Website\Model\Service as WebsiteService;
 use PHPUnit\Framework\TestCase;
 
 class WebsiteTest extends TestCase

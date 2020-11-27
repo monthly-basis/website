@@ -1,7 +1,7 @@
 <?php
-namespace LeoGalleguillos\WebsiteTest;
+namespace MonthlyBasis\WebsiteTest;
 
-use LeoGalleguillos\Website\Module;
+use MonthlyBasis\Website\Module;
 use PHPUnit\Framework\TestCase;
 use Zend\Mvc\Application;
 

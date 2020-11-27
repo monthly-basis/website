@@ -1,8 +1,8 @@
 <?php
-namespace LeoGalleguillos\Website\Model\Factory;
+namespace MonthlyBasis\Website\Model\Factory;
 
-use LeoGalleguillos\Website\Model\Entity as WebsiteEntity;
-use LeoGalleguillos\Website\Model\Table as WebsiteTable;
+use MonthlyBasis\Website\Model\Entity as WebsiteEntity;
+use MonthlyBasis\Website\Model\Table as WebsiteTable;
 use TypeError;
 use Zend\Db\Adapter\Adapter;
 

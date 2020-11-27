@@ -1,7 +1,7 @@
 <?php
-namespace LeoGalleguillos\WebsiteTest\Model\Table;
+namespace MonthlyBasis\WebsiteTest\Model\Table;
 
-use LeoGalleguillos\Website\Model\Table as WebsiteTable;
+use MonthlyBasis\Website\Model\Table as WebsiteTable;
 use MonthlyBasis\LaminasTest\TableTestCase;
 use TypeError;
 use Zend\Db\Adapter\Adapter;

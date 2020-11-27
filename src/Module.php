@@ -1,10 +1,10 @@
 <?php
-namespace LeoGalleguillos\Website;
+namespace MonthlyBasis\Website;
 
-use LeoGalleguillos\Website\Model\Factory as WebsiteFactory;
-use LeoGalleguillos\Website\Model\Service as WebsiteService;
-use LeoGalleguillos\Website\Model\Table as WebsiteTable;
-use LeoGalleguillos\Website\View\Helper as WebsiteHelper;
+use MonthlyBasis\Website\Model\Factory as WebsiteFactory;
+use MonthlyBasis\Website\Model\Service as WebsiteService;
+use MonthlyBasis\Website\Model\Table as WebsiteTable;
+use MonthlyBasis\Website\View\Helper as WebsiteHelper;
 
 class Module
 {

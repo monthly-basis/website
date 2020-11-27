@@ -1,8 +1,8 @@
 <?php
-namespace LeoGalleguillos\Website\View\Helper\Website;
+namespace MonthlyBasis\Website\View\Helper\Website;
 
-use LeoGalleguillos\Website\Model\Entity as WebsiteEntity;
-use LeoGalleguillos\Website\Model\Service as WebsiteService;
+use MonthlyBasis\Website\Model\Entity as WebsiteEntity;
+use MonthlyBasis\Website\Model\Service as WebsiteService;
 
 class FromConfig
 {

@@ -1,7 +1,7 @@
 <?php
-namespace LeoGalleguillos\WebsiteTest\Model\Entity;
+namespace MonthlyBasis\WebsiteTest\Model\Entity;
 
-use LeoGalleguillos\Website\Model\Entity as WebsiteEntity;
+use MonthlyBasis\Website\Model\Entity as WebsiteEntity;
 use PHPUnit\Framework\TestCase;
 
 class WebsiteTest extends TestCase

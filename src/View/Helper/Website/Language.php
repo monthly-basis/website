@@ -1,7 +1,7 @@
 <?php
-namespace LeoGalleguillos\Website\View\Helper\Website;
+namespace MonthlyBasis\Website\View\Helper\Website;
 
-use LeoGalleguillos\Website\Model\Service as WebsiteService;
+use MonthlyBasis\Website\Model\Service as WebsiteService;
 use Zend\View\Helper\AbstractHelper;
 
 class Language extends AbstractHelper

@@ -1,5 +1,5 @@
 <?php
-namespace LeoGalleguillos\WebsiteTest\GlobalFunction;
+namespace MonthlyBasis\WebsiteTest\GlobalFunction;
 
 use PHPUnit\Framework\TestCase;
 

@@ -1,5 +1,5 @@
 <?php
-namespace LeoGalleguillos\Website\Model\Table;
+namespace MonthlyBasis\Website\Model\Table;
 
 use Zend\Db\Adapter\Adapter;
 

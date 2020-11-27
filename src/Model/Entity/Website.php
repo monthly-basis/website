@@ -1,7 +1,7 @@
 <?php
-namespace LeoGalleguillos\Website\Model\Entity;
+namespace MonthlyBasis\Website\Model\Entity;
 
-use LeoGalleguillos\Website\Model\Entity as WebsiteEntity;
+use MonthlyBasis\Website\Model\Entity as WebsiteEntity;
 
 class Website
 {

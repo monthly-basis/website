@@ -3,7 +3,7 @@ namespace MonthlyBasis\Website\View\Helper;
 
 use MonthlyBasis\Website\Model\Entity as WebsiteEntity;
 use MonthlyBasis\Website\Model\Service as WebsiteService;
-use Zend\View\Helper\AbstractHelper;
+use Laminas\View\Helper\AbstractHelper;
 
 class Website extends AbstractHelper
 {

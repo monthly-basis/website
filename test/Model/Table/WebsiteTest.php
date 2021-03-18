@@ -4,7 +4,7 @@ namespace MonthlyBasis\WebsiteTest\Model\Table;
 use MonthlyBasis\Website\Model\Table as WebsiteTable;
 use MonthlyBasis\LaminasTest\TableTestCase;
 use TypeError;
-use Zend\Db\Adapter\Adapter;
+use Laminas\Db\Adapter\Adapter;
 
 class WebsiteTest extends TableTestCase
 {

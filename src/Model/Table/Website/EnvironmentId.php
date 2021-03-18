@@ -3,7 +3,7 @@ namespace MonthlyBasis\Website\Model\Table\Website;
 
 use Generator;
 use MonthlyBasis\Website\Model\Table as WebsiteTable;
-use Zend\Db\Adapter\Adapter;
+use Laminas\Db\Adapter\Adapter;
 
 class EnvironmentId
 {

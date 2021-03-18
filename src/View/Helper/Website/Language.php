@@ -2,7 +2,7 @@
 namespace MonthlyBasis\Website\View\Helper\Website;
 
 use MonthlyBasis\Website\Model\Service as WebsiteService;
-use Zend\View\Helper\AbstractHelper;
+use Laminas\View\Helper\AbstractHelper;
 
 class Language extends AbstractHelper
 {

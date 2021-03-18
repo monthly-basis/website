@@ -3,7 +3,7 @@ namespace MonthlyBasis\Website\Model\Factory;
 
 use MonthlyBasis\Website\Model\Entity as WebsiteEntity;
 use TypeError;
-use Zend\Db\Adapter\Adapter;
+use Laminas\Db\Adapter\Adapter;
 
 class FromArray
 {

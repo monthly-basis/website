@@ -3,7 +3,7 @@ namespace MonthlyBasis\WebsiteTest;
 
 use MonthlyBasis\Website\Module;
 use PHPUnit\Framework\TestCase;
-use Zend\Mvc\Application;
+use Laminas\Mvc\Application;
 
 class ModuleTest extends TestCase
 {

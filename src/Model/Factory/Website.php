@@ -4,7 +4,7 @@ namespace MonthlyBasis\Website\Model\Factory;
 use MonthlyBasis\Website\Model\Entity as WebsiteEntity;
 use MonthlyBasis\Website\Model\Table as WebsiteTable;
 use TypeError;
-use Zend\Db\Adapter\Adapter;
+use Laminas\Db\Adapter\Adapter;
 
 class Website
 {

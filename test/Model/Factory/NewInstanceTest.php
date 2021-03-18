@@ -14,7 +14,7 @@ class NewInstanceTest extends TestCase
 
     public function test_buildNewInstance()
     {
-        $this->assertNewInstanceOf(
+        $this->assertInstanceOf(
             WebsiteEntity\Website::class,
             $this->newInstanceFactory->buildNewInstance()
         );

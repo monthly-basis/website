@@ -2,14 +2,12 @@
 namespace MonthlyBasis\Website\Model\Factory;
 
 use MonthlyBasis\Website\Model\Entity as WebsiteEntity;
-use TypeError;
-use Laminas\Db\Adapter\Adapter;
 
 class FromArray
 {
     public function buildFromArray(
         array $array
-    ) : WebsiteEntity\Website {
+    ): WebsiteEntity\Website {
         $websiteEntity = new WebsiteEntity\Website();
 
         if (isset($array['amazon_tracking_id'])) {

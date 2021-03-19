@@ -5,10 +5,7 @@ use MonthlyBasis\Website\Model\Entity as WebsiteEntity;
 use MonthlyBasis\Website\Model\Factory as WebsiteFactory;
 use MonthlyBasis\Website\Model\Table as WebsiteTable;
 
-/**
- * @deprecated Use WebsiteFactory\FromDomain() instead
- */
-class Domain
+class FromDomain
 {
     public function __construct(
         WebsiteFactory\FromArray $fromArrayFactory,

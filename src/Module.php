@@ -65,6 +65,12 @@ class Module
                         $sm->get(WebsiteFactory\NewInstance::class)
                     );
                 },
+                WebsiteFactory\FromDomain::class => function ($sm) {
+                    return new WebsiteFactory\FromDomain(
+                        $sm->get(WebsiteFactory\FromArray::class),
+                        $sm->get(WebsiteTable\Website::class)
+                    );
+                },
                 WebsiteFactory\NewInstance::class => function ($sm) {
                     return new WebsiteFactory\NewInstance();
                 },

@@ -80,6 +80,10 @@ class Website
         return $this->buildFromArray($arrayObject);
     }
 
+    /**
+     * @deprecated This method is only called by the other deprecated method
+     *             in this class.
+     */
     protected function buildInstance() : WebsiteEntity\Website
     {
         return new WebsiteEntity\Website();

@@ -84,6 +84,12 @@ class Module
                 WebsiteService\Website::class => function ($sm) {
                     return new WebsiteService\Website();
                 },
+                WebsiteService\Website\Websites::class => function ($sm) {
+                    return new WebsiteService\Website\Websites(
+                        $sm->get(WebsiteFactory\FromArray::class),
+                        $sm->get(WebsiteTable\Website\WebsiteId::class)
+                    );
+                },
                 WebsiteService\Website\FromConfig::class => function ($sm) {
                     return new WebsiteService\Website\FromConfig(
                         $sm->get('Config')['website'],

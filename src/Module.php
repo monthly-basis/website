@@ -101,6 +101,12 @@ class Module
                         $sm->get(WebsiteTable\Website::class)
                     );
                 },
+                WebsiteTable\Website\WebsiteId::class => function ($sm) {
+                    return new WebsiteTable\Website\WebsiteId(
+                        $sm->get('website'),
+                        $sm->get(WebsiteTable\Website::class)
+                    );
+                },
             ],
         ];
     }

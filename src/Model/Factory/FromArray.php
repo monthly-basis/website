@@ -2,13 +2,20 @@
 namespace MonthlyBasis\Website\Model\Factory;
 
 use MonthlyBasis\Website\Model\Entity as WebsiteEntity;
+use MonthlyBasis\Website\Model\Factory as WebsiteFactory;
 
 class FromArray
 {
+    public function __construct(
+        WebsiteFactory\NewInstance $newInstanceFactory
+    ) {
+        $this->newInstanceFactory = $newInstanceFactory;
+    }
+
     public function buildFromArray(
         array $array
     ): WebsiteEntity\Website {
-        $websiteEntity = new WebsiteEntity\Website();
+        $websiteEntity = $this->newInstanceFactory->buildNewInstance();
 
         if (isset($array['amazon_tracking_id'])) {
             $websiteEntity->setAmazonTrackingId(

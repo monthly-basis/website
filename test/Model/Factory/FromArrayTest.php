@@ -9,11 +9,22 @@ class FromArrayTest extends TestCase
 {
     protected function setUp(): void
     {
-        $this->fromArrayFactory = new WebsiteFactory\FromArray();
+        $this->newInstanceFactoryMock = $this->createMock(
+            WebsiteFactory\NewInstance::class
+        );
+        $this->fromArrayFactory = new WebsiteFactory\FromArray(
+            $this->newInstanceFactoryMock
+        );
     }
 
     public function test_buildFromArray()
     {
+        $this->newInstanceFactoryMock
+            ->expects($this->once())
+            ->method('buildNewInstance')
+            ->willReturn(new WebsiteEntity\Website())
+            ;
+
         $array = [
             'description'                  => 'My example website',
             'domain'                       => 'www.example.com',

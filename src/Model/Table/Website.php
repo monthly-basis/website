@@ -98,14 +98,8 @@ class Website
      */
     public function selectWhereDomain(string $domain): array
     {
-        $sql = '
-            SELECT `website`.`website_id`
-                 , `website`.`domain`
-                 , `website`.`name`
-                 , `website`.`description`
-                 , `website`.`google_analytics_tracking_id`
-                 , `website`.`amazon_tracking_id`
-                 , `website`.`facebook_app_id`
+        $sql = $this->getSelect()
+             . '
               FROM `website`
              WHERE `website`.`domain` = ?
                  ;

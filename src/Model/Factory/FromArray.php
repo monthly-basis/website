@@ -49,6 +49,12 @@ class FromArray
             );
         }
 
+        if (isset($array['google_tag_manager_id'])) {
+            $websiteEntity->setGoogleTagManagerId(
+                $array['google_tag_manager_id']
+            );
+        }
+
         if (isset($array['language'])) {
             $websiteEntity->setLanguage(
                 $array['language']

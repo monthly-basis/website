@@ -29,6 +29,7 @@ class FromArrayTest extends TestCase
             'description'                  => 'My example website',
             'domain'                       => 'www.example.com',
             'google_analytics_tracking_id' => 'example-tracking-id',
+            'google_tag_manager_id'        => 'google-tag-manager-id',
             'metadata' => [
                 'foo' => 'bar',
             ],
@@ -42,6 +43,7 @@ class FromArrayTest extends TestCase
             ->setDescription('My example website')
             ->setDomain('www.example.com')
             ->setGoogleAnalyticsTrackingId('example-tracking-id')
+            ->setGoogleTagManagerId('google-tag-manager-id')
             ->setMetadata(['foo' => 'bar'])
             ->setName('Example Name')
             ->setWebsiteId('12345')

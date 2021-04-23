@@ -19,6 +19,7 @@ class Website
                  , `website`.`description`
                  , `website`.`environment_id`
                  , `website`.`google_analytics_tracking_id`
+                 , `website`.`google_tag_manager_id`
                  , `website`.`amazon_tracking_id`
                  , `website`.`facebook_app_id`
         ';

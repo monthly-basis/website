@@ -57,6 +57,16 @@ class WebsiteTest extends TestCase
             $this->websiteEntity->getGoogleAnalyticsTrackingId()
         );
 
+        $googleTagManagerId = 'google-tag-manager-id';
+        $this->assertSame(
+            $this->websiteEntity,
+            $this->websiteEntity->setGoogleTagManagerId($googleTagManagerId)
+        );
+        $this->assertSame(
+            $googleTagManagerId,
+            $this->websiteEntity->getGoogleTagManagerId()
+        );
+
         $language = 'es';
         $this->assertSame(
             $this->websiteEntity,

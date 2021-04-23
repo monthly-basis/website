@@ -36,6 +36,11 @@ class Website
     public $googleAnalyticsTrackingId;
 
     /**
+     * @var string
+     */
+    protected $googleTagManagerId;
+
+    /**
      * @var array
      */
     protected $metadata;
@@ -83,6 +88,11 @@ class Website
     public function getGoogleAnalyticsTrackingId() : string
     {
         return $this->googleAnalyticsTrackingId;
+    }
+
+    public function getGoogleTagManagerId() : string
+    {
+        return $this->googleTagManagerId;
     }
 
     public function getLanguage(): string
@@ -138,6 +148,12 @@ class Website
     public function setGoogleAnalyticsTrackingId(string $googleAnalyticsTrackingId)
     {
         $this->googleAnalyticsTrackingId = $googleAnalyticsTrackingId;
+        return $this;
+    }
+
+    public function setGoogleTagManagerId(string $googleTagManagerId)
+    {
+        $this->googleTagManagerId = $googleTagManagerId;
         return $this;
     }
 

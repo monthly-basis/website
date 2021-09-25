@@ -10,10 +10,10 @@ class FromConfig
 
     public function __construct(
         array $websiteConfig,
-        WebsiteFactory\Website $websiteFactory
+        WebsiteFactory\FromArray $fromArrayFactory
     ) {
-        $this->websiteConfig  = $websiteConfig;
-        $this->websiteFactory = $websiteFactory;
+        $this->websiteConfig    = $websiteConfig;
+        $this->fromArrayFactory = $fromArrayFactory;
     }
 
     public function getWebsite(): WebsiteEntity\Website
@@ -22,7 +22,7 @@ class FromConfig
             return $this->cache['websiteEntity'];
         }
 
-        $this->cache['websiteEntity'] = $this->websiteFactory->buildFromArray(
+        $this->cache['websiteEntity'] = $this->fromArrayFactory->buildFromArray(
             $this->websiteConfig['domains'][$_SERVER['HTTP_HOST']]
         );
         return $this->cache['websiteEntity'];

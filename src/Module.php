@@ -99,7 +99,7 @@ class Module
                 WebsiteService\Website\FromConfig::class => function ($sm) {
                     return new WebsiteService\Website\FromConfig(
                         $sm->get('Config')['website'],
-                        $sm->get(WebsiteFactory\Website::class)
+                        $sm->get(WebsiteFactory\FromArray::class)
                     );
                 },
                 WebsiteTable\Website::class => function ($sm) {

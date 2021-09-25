@@ -13,11 +13,11 @@ class Module
         return [
             'view_helpers' => [
                 'aliases' => [
-                    'getShowAdsService' => WebsiteHelper\ShowAdsService::class,
-                    'getWebsite' => WebsiteHelper\Website::class,
+                    'getShowAdsService'    => WebsiteHelper\ShowAdsService::class,
+                    'getWebsite'           => WebsiteHelper\Website::class,
                     'getWebsiteFromConfig' => WebsiteHelper\Website\FromConfig::class,
-                    'getWebsiteInstance' => WebsiteHelper\GetInstance::class,
-                    'getWebsiteLanguage' => WebsiteHelper\Website\Language::class,
+                    'getWebsiteInstance'   => WebsiteHelper\GetInstance::class,
+                    'getWebsiteLanguage'   => WebsiteHelper\Website\Language::class,
                 ],
                 'factories' => [
                     WebsiteHelper\GetInstance::class => function ($sm) {

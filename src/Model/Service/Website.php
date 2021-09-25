@@ -6,10 +6,7 @@ use MonthlyBasis\Website\Model\Service as WebsiteService;
 
 class Website
 {
-    /**
-     * @var WebsiteEntity\Website $websiteEntity
-     */
-    protected $websiteEntity;
+    protected WebsiteEntity\Website $websiteEntity;
 
     public function getWebsite(): WebsiteEntity\Website
     {

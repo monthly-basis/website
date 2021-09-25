@@ -55,6 +55,8 @@ class Website
      */
     public $name;
 
+    protected string $shortName;
+
     /**
      * @var int
      */
@@ -108,6 +110,11 @@ class Website
     public function getName()
     {
         return $this->name;
+    }
+
+    public function getShortName(): string
+    {
+        return $this->shortName;
     }
 
     public function getWebsiteId()
@@ -172,6 +179,12 @@ class Website
     public function setName(string $name)
     {
         $this->name = $name;
+        return $this;
+    }
+
+    public function setShortName(string $shortName)
+    {
+        $this->shortName = $shortName;
         return $this;
     }
 

@@ -99,6 +99,16 @@ class WebsiteTest extends TestCase
             $this->websiteEntity->getName()
         );
 
+        $shortName = 'short name';
+        $this->assertSame(
+            $this->websiteEntity,
+            $this->websiteEntity->setShortName($shortName)
+        );
+        $this->assertSame(
+            $shortName,
+            $this->websiteEntity->getShortName()
+        );
+
         $value = 123;
         $this->assertSame(
             $this->websiteEntity,

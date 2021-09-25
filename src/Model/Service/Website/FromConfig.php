@@ -6,10 +6,7 @@ use MonthlyBasis\Website\Model\Factory as WebsiteFactory;
 
 class FromConfig
 {
-    /**
-     * @var array
-     */
-    protected $cache = [];
+    protected array $cache = [];
 
     public function __construct(
         array $websiteConfig,

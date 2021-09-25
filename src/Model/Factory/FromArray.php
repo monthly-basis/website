@@ -71,6 +71,10 @@ class FromArray
             $websiteEntity->setName($array['name']);
         }
 
+        if (isset($array['short_name'])) {
+            $websiteEntity->setShortName($array['short_name']);
+        }
+
         if (isset($array['website_id'])) {
             $websiteEntity->setWebsiteId(
                 $array['website_id']

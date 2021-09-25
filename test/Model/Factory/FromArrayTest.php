@@ -34,18 +34,19 @@ class FromArrayTest extends TestCase
                 'foo' => 'bar',
             ],
             'name'                         => 'Example Name',
+            'short_name'                   => 'The Short Name',
             'website_id'                   => '12345',
             'amazon_tracking_id'           => 'amazon-20',
             'facebook_app_id'              => '12345',
         ];
-        $websiteEntity = new WebsiteEntity\Website();
-        $websiteEntity
+        $websiteEntity = (new WebsiteEntity\Website())
             ->setDescription('My example website')
             ->setDomain('www.example.com')
             ->setGoogleAnalyticsTrackingId('example-tracking-id')
             ->setGoogleTagManagerId('google-tag-manager-id')
             ->setMetadata(['foo' => 'bar'])
             ->setName('Example Name')
+            ->setShortName('The Short Name')
             ->setWebsiteId('12345')
             ->setAmazonTrackingId('amazon-20')
             ->setFacebookAppId('12345')

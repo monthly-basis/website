@@ -26,6 +26,7 @@ class FromArrayTest extends TestCase
             ;
 
         $array = [
+            'country'                      => 'zaf',
             'description'                  => 'My example website',
             'domain'                       => 'www.example.com',
             'google_analytics_tracking_id' => 'example-tracking-id',
@@ -40,6 +41,7 @@ class FromArrayTest extends TestCase
             'facebook_app_id'              => '12345',
         ];
         $websiteEntity = (new WebsiteEntity\Website())
+            ->setCountry('zaf')
             ->setDescription('My example website')
             ->setDomain('www.example.com')
             ->setGoogleAnalyticsTrackingId('example-tracking-id')

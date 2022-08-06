@@ -23,6 +23,10 @@ class FromArray
             );
         }
 
+        if (isset($array['country'])) {
+            $websiteEntity->setCountry($array['country']);
+        }
+
         if (isset($array['description'])) {
             $websiteEntity->setDescription($array['description']);
         }

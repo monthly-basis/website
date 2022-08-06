@@ -10,6 +10,8 @@ class Website
      */
     protected $amazonTrackingId;
 
+    protected string $country;
+
     /**
      * @var string
      */
@@ -65,6 +67,11 @@ class Website
     public function getAmazonTrackingId()
     {
         return $this->amazonTrackingId;
+    }
+
+    public function getCountry(): string
+    {
+        return $this->country;
     }
 
     public function getDescription()
@@ -125,6 +132,12 @@ class Website
     public function setAmazonTrackingId(string $amazonTrackingId)
     {
         $this->amazonTrackingId = $amazonTrackingId;
+        return $this;
+    }
+
+    public function setCountry(string $country): WebsiteEntity\Website
+    {
+        $this->country = $country;
         return $this;
     }
 

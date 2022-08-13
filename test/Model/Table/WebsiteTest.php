@@ -43,8 +43,8 @@ class WebsiteTest extends TableTestCase
             $this->fail();
         } catch (TypeError $typeError) {
             $this->assertSame(
-                'Return value of',
-                substr($typeError->getMessage(), 0, 15)
+                'MonthlyBasis\Website\Model\Table\Website::selectWhereDomain(): Return value must be of type array, bool returned',
+                $typeError->getMessage(),
             );
         }
     }

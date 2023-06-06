@@ -52,6 +52,9 @@ class Website
      */
     protected $language;
 
+    protected string $languageCode;
+    protected string $languageName;
+
     /**
      * @var string
      */

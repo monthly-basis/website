@@ -11,6 +11,38 @@ class WebsiteTest extends TestCase
         $this->websiteEntity = new WebsiteEntity\Website();
     }
 
+    public function test___get()
+    {
+        $this->assertNull($this->websiteEntity->language);
+        $this->websiteEntity->setLanguage('en');
+        $this->assertSame(
+            'en',
+            $this->websiteEntity->language
+        );
+    }
+
+    public function test___isset()
+    {
+        $this->assertFalse(
+            isset($this->websiteEntity->name)
+        );
+
+        $this->websiteEntity->setName('Website Name');
+
+        $this->assertTrue(
+            isset($this->websiteEntity->name)
+        );
+    }
+
+    public function test___set()
+    {
+        $this->websiteEntity->language = 'en';
+        $this->assertSame(
+            'en',
+            $this->websiteEntity->language
+        );
+    }
+
     public function test_getAndSetMethods()
     {
         $country = 'zaf';

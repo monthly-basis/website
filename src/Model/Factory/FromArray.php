@@ -65,6 +65,14 @@ class FromArray
             );
         }
 
+        if (isset($array['language_code'])) {
+            $websiteEntity->languageCode = $array['language_code'];
+        }
+
+        if (isset($array['language_name'])) {
+            $websiteEntity->languageName = $array['language_name'];
+        }
+
         if (isset($array['metadata'])) {
             $websiteEntity->setMetadata(
                 $array['metadata']

@@ -31,6 +31,8 @@ class FromArrayTest extends TestCase
             'domain'                       => 'www.example.com',
             'google_analytics_tracking_id' => 'example-tracking-id',
             'google_tag_manager_id'        => 'google-tag-manager-id',
+            'language_code'                => 'en',
+            'language_name'                => 'English',
             'metadata' => [
                 'foo' => 'bar',
             ],
@@ -53,6 +55,9 @@ class FromArrayTest extends TestCase
             ->setAmazonTrackingId('amazon-20')
             ->setFacebookAppId('12345')
             ;
+
+        $websiteEntity->languageCode = 'en';
+        $websiteEntity->languageName = 'English';
 
         $this->assertEquals(
             $websiteEntity,

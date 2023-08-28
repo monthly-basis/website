@@ -17,10 +17,16 @@ class Module
                     'getShowAdsService'    => WebsiteHelper\ShowAdsService::class,
                     'getWebsite'           => WebsiteHelper\Website::class,
                     'getWebsiteFromConfig' => WebsiteHelper\Website\FromConfig::class,
+                    'getWebsiteDomain'     => WebsiteHelper\Domain::class,
                     'getWebsiteInstance'   => WebsiteHelper\GetInstance::class,
                     'getWebsiteLanguage'   => WebsiteHelper\Website\Language::class,
                 ],
                 'factories' => [
+                    WebsiteHelper\Domain::class => function ($sm) {
+                        return new WebsiteHelper\Domain(
+                            $sm->get(WebsiteEntity\Config::class)
+                        );
+                    },
                     WebsiteHelper\GetInstance::class => function ($sm) {
                         return new WebsiteHelper\GetInstance(
                             $sm->get(WebsiteService\FromDomain::class)

@@ -1,6 +1,7 @@
 <?php
 namespace MonthlyBasis\Website;
 
+use MonthlyBasis\Website\Model\Entity as WebsiteEntity;
 use MonthlyBasis\Website\Model\Factory as WebsiteFactory;
 use MonthlyBasis\Website\Model\Service as WebsiteService;
 use MonthlyBasis\Website\Model\Table as WebsiteTable;
@@ -54,6 +55,11 @@ class Module
     {
         return [
             'factories' => [
+                WebsiteEntity\Config::class => function ($sm) {
+                    return new WebsiteEntity\Config(
+                        $sm->get('Config')['monthly-basis']['website'] ?? []
+                    );
+                },
                 WebsiteFactory\Domain::class => function ($sm) {
                     return new WebsiteFactory\Domain(
                         $sm->get(WebsiteFactory\FromArray::class),
